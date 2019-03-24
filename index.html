@@ -73,6 +73,33 @@
             transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
 
+
+        .rating {
+            width: 150px;
+            height: 30px;
+            position: relative;
+        }
+        .stars {
+            background: url(stars-newer-bg-lg.png);
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .back {
+            background: #000000;
+            border-bottom: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+        }
+
+        .back, .stars {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
     </style>
 
 </head>
@@ -176,18 +203,206 @@
                     <br/>
 
                     <div class="row">
+
                         <div class="col-lg-12">
                             <span class="badge badge-dark mb-2 trebuchet">Aug 2015 - Aug 2017</span>
                             <h3 class="trebuchet"><img class="img-fluid" src="wsu-icon-transparent.png" alt="Washington State University:  Go Cougs!"> Washington State University</h3>
                             <p class="calibri">I attended Washington State University starting August 2015 and completed earning my BBA in Management Information Systems magna cum laude August 2017.</p>
+                            <h5 class="trebuchet text-muted">Degree Earned</h5>
+
+                            <table class="table calibri">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Degree</th>
+                                    <th scope="col">Completed</th>
+                                    <th scope="col">GPA</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Management Information Systems<br/>BBA<br/>Magna cum laude</td>
+                                    <td>Aug 2017</td>
+                                    <td>3.82</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br/>
                             <hr/>
                         </div>
+
+                        <div class="col-lg-12">
+                            <span class="badge badge-dark mb-2 trebuchet">Jul 2012 - Jun 2015</span>
+                            <h3 class="trebuchet"><img class="img-fluid" src="scc-logo.png" alt="Spokane Community College:  Go Squatch!"> Spokane Community College</h3>
+                            <p class="calibri">I started attending Spokane Community College in July 2012 and initially decided to pursue my AAS in Software Development. In the process, I made the decision to continue pursuing my education with a goal of attending WSU.  I earned two more degrees along the way in order to earn as many of my prerequisites towards my BA as possible.</p>
+                            <h5 class="trebuchet text-muted">Degrees Earned</h5>
+
+                            <table class="table calibri">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Degree</th>
+                                    <th scope="col">Completed</th>
+                                    <th scope="col">GPA</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Software Development<br/>AAS<br/></td>
+                                    <td>Dec 2014</td>
+                                    <td>3.88</td>
+                                </tr>
+                                <tr>
+                                    <td>Associates in Arts<br/>AA<br/></td>
+                                    <td>Jun 2015</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Associates in Business<br/>AA<br/></td>
+                                    <td>Jun 2015</td>
+                                    <td>—</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <h5 class="trebuchet text-muted">Certificates Earned</h5>
+                            <table class="table calibri">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Certificate</th>
+                                    <th scope="col">Date Earned</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Mobile Development</td>
+                                    <td>Dec 2014</td>
+                                </tr>
+                                <tr>
+                                    <td>Web Design</td>
+                                    <td>Jun 2014</td>
+                                </tr>
+                                <tr>
+                                    <td>Web Developer</td>
+                                    <td>Mar 2014</td>
+                                </tr>
+                                <tr>
+                                    <td>.NET Developer</td>
+                                    <td>Mar 2014</td>
+                                </tr>
+                                <tr>
+                                    <td>Computer Science</td>
+                                    <td>Jun 2013</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <h5 class="trebuchet text-muted">Scholarships</h5>
+                            <table class="table calibri">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Scholarship</th>
+                                    <th scope="col">Awarded</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Community Colleges of Spokane Alumni Association Scholarship</td>
+                                    <td>2013-2014</td>
+                                </tr>
+                                <tr>
+                                    <td>Community Colleges of Spokane Alumni Association Scholarship</td>
+                                    <td>2014-2015</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <hr/>
+
+                        </div>
+
 
 
                     </div>
 
 
 
+
+                </div>
+
+
+                <div class="col-lg-4 col-12">
+                    <h2 class="trebuchet lg-headers text-center">Skills <i class="fas fa-list-alt"></i></h2>
+
+
+                    <h5 class="trebuchet text-muted">Software</h5>
+                    <table class="table calibri">
+
+                        <tbody>
+                        <tr>
+                            <td>Microsoft Office</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Git/Github</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Visual Studio</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>JetBrains IDE's</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Adobe Photoshop</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>SQL Server</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Microsoft Project</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Microsoft Visio</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Tableau</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Adobe Flash</td>
+                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-8 col-12">
+                    <br/>
+
+                    <h2 class="trebuchet lg-headers"> <i class="fas fa-guitar"></i> Hobbies &amp; Interests <i class="fas fa-bicycle"></i></h2>
+                    <p class="calibri">For fun I like to hike, bike, listen to music, collect vinyl records, play guitar, sing and write songs. I also enjoy doing home improvement projects around my house, working in my yard and vegetable gardening. I also enjoy spending time with family & friends. When I am not busy working or doing the other hobbies mentioned I spend a great deal of time further developing my technical skills by learning as much as I can about software, coding and web development. I am constantly learning about new technologies and am committed to absorbing as much as I can. In particular, I do what I can to keep up with MVC frameworks. I have a goal to learn as many frameworks as possible since I greatly enjoy and appreciate that type of web application development environment.</p>
 
                 </div>
 

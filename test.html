@@ -132,6 +132,12 @@
             font-weight: 900;
         }
 
+        .my-gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #000000;
+        }
+
     </style>
 
 </head>
@@ -203,7 +209,7 @@
             <br/>
 
             <div class="container">
-                <h1 class="trebuchet lg-headers text-center">Resume <a class="btn btn-sm btn-dark" href="CSnyder-Resume-March-21st-2019.pdf"><i class="fas fa-download"></i> PDF</a></h1>
+                <h1 class="trebuchet lg-headers text-center"><i class="fas fa-file-alt"></i> Resume <a class="btn btn-sm btn-dark" href="CSnyder-Resume-March-21st-2019.pdf"><i class="fas fa-download"></i> PDF</a></h1>
 
             <div class="row">
 
@@ -441,6 +447,17 @@
                         <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
                     </tr>
 
+                    <tr>
+                        <td>LEMP</td>
+                        <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
+
+                    <tr>
+                        <td>VPS</td>
+                        <td><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
+                    </tr>
+
+
 
                     </tbody>
                 </table>
@@ -591,23 +608,351 @@
                     </tbody>
                 </table>
 
-
-
             </div>
-
 
                 </div>
 
-
             </div>
-
 
 
         </div>
 
         <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
             <br/>
-            <h1 class="text-center trebuchet lg-headers">Portfolio</h1>
+            <h1 class="text-center trebuchet lg-headers"><i class="fas fa-briefcase"></i> Portfolio</h1>
+            <p class="main-text calibri">This section of my site is dedicated to some work I have completed and felt appropriate to showcase.  If you click on an image on this page, you will be opening up a navigable gallery for a particular project which includes a technical description of each image.  If you click on an accompanying 'More Info' button then you will be able to read more about a particular project.</p>
+
+           <!--beginning of portfolio galleries-->
+            <div class="row">
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazers-section-main.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images/tblazersfans-main.png" itemprop="thumbnail" alt="Image description" data-size="964x1024" />
+                            </a>
+                            <figcaption itemprop="caption description">Rails prototype- - Portland Trail Blazers fans website</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tblazers-game-boxscore-fullpage.png" itemprop="contentUrl" data-size="756x751">
+                                <img src="images/tblazers-game-boxscore-fullpage.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Rails prototype continued<br/>CSV Boxscore upload, pagination and CRUD</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/boxscore-confine-show.png" itemprop="contentUrl" data-size="562x1345">
+                                <img src="images/boxscore-confine-show.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Boxscore formatting after import</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazersfans-calendar-good.png" itemprop="contentUrl" data-size="1063x1108">
+                                <img src="images/blazersfans-calendar-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Rails prototype continued <br/>Calendar with CRUD events</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Ruby on Rails</h6>
+                    <a href="#demo5" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo5" class="collapse calibri">
+                        <br/>
+                        <p>I am a big basketball fan both college (Gonzaga and March Madness) and the NBA.  As a challenge to myself while in my down time after studying, I decided to try to create a Ruby on Rails application that was inspired by my favorite NBA team, the Portland Trail Blazers.  I took the time to implement the things that I had learned from the course I took in Rails at Spokane Community College and I also took the time to learn about and implement things that I did not know about before like how to call multiple databases from one page, create a calendar that you and load events into, and to upload a CSV file to seed data to a Model from a view.</p><p>I also learned to deploy this site using PostgreSQL  and Capistrano on an Apache Digital Ocean droplet.  If you wish to visit this site please do so at: <a href="http://dev.thisdudecodes.com/" target="_blank">http://dev.thisdudecodes.com</a>.  **Please note that this site is a prototype and still in development.  I hope to be able to develop this Rails application out more and will do so as I can.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/lilac-city-full.png" itemprop="contentUrl" data-size="1024x1024">
+                                <img src="images/lilac-main.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Static HTML5/CSS site developed in 2013</figcaption>
+                        </figure>
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/jquery-dogbook-cover-good.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images/jquery-dogbook-cover-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">jQuery flipbook featuring cute pets</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/roscoe-flipped-open-good.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images/roscoe-flipped-open-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">jQuery flipped page of book.<br/> Charming little fella eh?</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/lilac-dogs-contact-page-good.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images/lilac-dogs-contact-page-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Contact page PHP</figcaption>
+                        </figure>
+
+
+                    </div>
+                    <h6 class="trebuchet">HTML5/CSS/jQuery</h6>
+                    <a href="#demo6" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo6" class="collapse calibri">
+                        <br/>
+                        <p>I completed this web page during summer break of 2013.  It was around this time that I started feeling that I was gaining greater competence with my HTML5/CSS3 skills and I also introduced myself to jQuery plug-ins (See the ‘Meet Our All Stars’ page).  I did this project for a friend.  Unfortunately, she has decided to discontinue her dog walking business to focus on her regular 9-5 job.  I spent many hours developing my front-end skills while creating this site.  Since the site is offline, I have decided to host the project on this site so you may still see a live version of it by visiting:<br/> <a href="http://thisdudecodes.com/lilac-dogs" target="_blank">http://thisdudecodes.com/lilac-dogs</a></p></div>
+                </div>
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/checkenginefree-map-view-page.png" itemprop="contentUrl" data-size="1048x1258">
+                                <img src="images/checkengine-main.png" itemprop="thumbnail" alt="checkenginefree.com" />
+                            </a>
+                            <figcaption itemprop="caption description">Single page jQuery Mobile fully responsive integrated with Google Maps API/Google Fusion Tables, GPS, browser geolocation, SSL,<br/> and functional search string location to GPS coordinates refresh map and nearest locations</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/checkengine-validation-show-good.png" itemprop="contentUrl" data-size="1063x2275">
+                                <img src="images/checkengine-validation-show-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Location error reporting with clever Spam validation</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/checkenginefree-contact-good.png" itemprop="contentUrl" data-size="1063x975">
+                                <img src="images/checkenginefree-contact-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Contact form PHP</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/checkenginefree-form-validation-good.png" itemprop="contentUrl" data-size="1063x1035">
+                                <img src="images/checkenginefree-form-validation-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Contact form validation</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Single Page jQuery Mobile</h6>
+                    <a href="#demo7" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo7" class="collapse calibri">
+                        <br/>
+                        <p>This one page responsive web app utilizes HTML5, CSS, Javascript/jQuery, jQuery Mobile, Google Maps API (JSON), Browser GPS and PHP (contact form page).  If you wish to see the live web page please visit: <a href="https://checkenginefree.com/" target="_blank">http://www.checkenginefree.com</a></p>  <p>NOTE- - This site needs to be updated (it was coded in Summer 2014) because Google Fusion Tables is being deprecated.  I have every intention of updating this site so that it can be useful for many years to come! (March 2019)</p>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 mt-5 col-md-6">
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/amhodgson-section-main.png" itemprop="contentUrl" data-size="1048x1333">
+                                <img src="images/amhodgson-main.png" itemprop="thumbnail" alt="amhodgson.com" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom responsive Tumblr template<br/> with added Contact page (PHP)</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/amhodgsonbooks-good.png" itemprop="contentUrl" data-size="600x2429">
+                                <img src="images/amhodgsonbooks-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Neatly laid out CSS/HTML based on client's vision<br>custom font yet SEO friendly!</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/amhodgsoncontact-full.png" itemprop="contentUrl" data-size="1063x1300">
+                                <img src="images/amhodgsoncontact-full.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Contact page PHP<br/>**Built outside of Tumblr</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Custom Tumblr Theme</h6>
+                    <a href="#demo8" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo8" class="collapse calibri">
+                        <br/>
+
+                        <p>I created this responsive custom Tumblr theme with my sister for her writing career.  Before taking on this project I did not know much about Tumblr, so I was required to learn how to create a custom theme and found that it is a similar process to creating Wordpress themes.  For this project I also created a custom contact form page utilizing PHP.  I would not say that I am proficient at creating Tumblr themes but I am confident I could get better at it, and it would also not be difficult for me to learn similar templating.  If you wish to see the live version of this website please visit:  <a href="http://amhodgson.com/" target="_blank">http://www.amhodgson.com</a></p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/ASP-mvc-albums-CRUD.png" itemprop="contentUrl" data-size="1024x1024">
+                                <img src="images/ASP-mvc-albums-CRUD-thumb.png" itemprop="thumbnail" alt="CRUD MVC ASP" />
+                            </a>
+                            <figcaption itemprop="caption description">MVC ASP CRUD</figcaption>
+                        </figure>
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/MVC-ASP-CRUD-with-image-upload.png" itemprop="contentUrl" data-size="1323x784">
+                                <img src="images/MVC-ASP-CRUD-with-image-upload.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">MVC ASP Create view with image upload</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/social-logins-oauth-mvc-asp.png" itemprop="contentUrl" data-size="1323x784">
+                                <img src="images/social-logins-oauth-mvc-asp.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Social media OAuth2 login links<br/> I have test accounts working with all providers listed</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">ASP.NET MVC</h6>
+                    <a href="#demo9" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo9" class="collapse calibri">
+                        <br/>
+                        <p>Since I am familiar with Rails and MVC I decided to learn ASP.NET MVC when not busy studying.  Here is some idea of what I can do with that technology.  Unfortunately,  I do not currently have a neatly designed page as I have mostly been focusing on learning the backend of this technology.  There are also other things that I have figured out with this technology like pagination of records- - for example, but I do not have a photo at this time only code.  I also do not have a live version of this site but if requested I can provide examples of my code!  It has been a cool experience learning ASP MVC because I have found that I am able to learn MVC frameworks fairly easily and am excited to learn more!</p></div>
+                </div>
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/laravel-blazersfans-mainpage.png" itemprop="contentUrl" data-size="1175x2294">
+                                <img src="images/laravel-blazersfans-mainpage-thumb.png" itemprop="thumbnail" alt="Laravel Trail Blazers fan site Main Page" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/> Trail Blazers fan site Main Page</figcaption>
+                        </figure>
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazersfans-laravel-article-show.png" itemprop="contentUrl" data-size="1190x1607">
+                                <img src="images/blazersfans-laravel-article-show.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/>individual article show page Trail Blazers fan site</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazersfans-laravel-boxscore-listings-pagination.png" itemprop="contentUrl" data-size="1175x999">
+                                <img src="images/blazersfans-laravel-boxscore-listings-pagination.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/> Blazers fans historical boxscores w/ pagination </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazersfans-laravel-boxscore-full-page.png" itemprop="contentUrl" data-size="1190x2270">
+                                <img src="images/blazersfans-laravel-boxscore-full-page.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/> Blazers fans individual boxscore full page w/ Facebook comments</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazersfans-laravel-contact-page.png" itemprop="contentUrl" data-size="1175x920">
+                                <img src="images/blazersfans-laravel-contact-page.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC<br/> Blazers fans contact page w/ validation</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazersfans-laravel-login-social-media-oauth.png" itemprop="contentUrl" data-size="1175x934">
+                                <img src="images/blazersfans-laravel-login-social-media-oauth.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC Login<br/>w/ optional social media OAuth login capability.</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/blazersfans-laravel-edit-article-full-page.png" itemprop="contentUrl" data-size="1177x3485">
+                                <img src="images/blazersfans-laravel-edit-article-full-page.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC Edit Article<br/>w/ ability to add images to article image gallery and add/edit captions.</figcaption>
+                        </figure>
+
+
+
+
+                    </div>
+                    <h6 class="trebuchet">Laravel  Framework</h6>
+                    <a href="#demo10" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo10" class="collapse calibri">
+                        <br/>
+                        <p>Since I am familiar with Rails and MVC I also decided to learn Laravel MVC in my free time.  Here is a recent example of what I can do while working with this technology in combination with styling.  Currently, I have a live version of this site at: <a href="https://trailblazersfans.com" target="_blank">https://trailblazersfans.com</a>.  The site is definitely a demo, and work still remains to be done.  It has been a fun and rewarding experience learning Laravel because I have found I am able to learn MVC frameworks fairly easily and am excited to learn many more during my career or as my personal time allows!</p></div>
+                </div>
+
+            </div>
+            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                <!-- Background of PhotoSwipe.
+                     It's a separate element, as animating opacity is faster than rgba(). -->
+                <div class="pswp__bg"></div>
+
+                <!-- Slides wrapper with overflow:hidden. -->
+                <div class="pswp__scroll-wrap">
+
+                    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+
+                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                    <div class="pswp__ui pswp__ui--hidden">
+
+                        <div class="pswp__top-bar">
+
+                            <!--  Controls are self-explanatory. Order can be changed. -->
+
+                            <div class="pswp__counter"></div>
+
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                            <!-- element will get class pswp__preloader--active when preloader is running -->
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br/>
+            <br/>
+
+
         </div>
 
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -663,6 +1008,11 @@
     </div>
 </div>
 
+<style scoped>
+    @import "css/photoswipe.css";
+    @import "css/default-skin.css";
+</style>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -673,6 +1023,36 @@
 
 <!--jquery form validation-->
 <script src="jquery.validate.min.js"></script>
+
+
+
+
+
+
+<!-- lightgallery plugins -->
+<script src="js/lg-thumbnail.min.js"></script>
+<script src="js/lg-fullscreen.min.js"></script>
+
+
+<script src="js/vendor/jquery.hashchange.min.js"></script>
+<script src="js/vendor/jquery.easytabs.min.js"></script>
+
+
+
+<script src="js/main.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+
+<!-- Photoswipe  set of js and calling it-->
+<script src="js/index.js"></script>
+<script src="js/photoswipe.min.js"></script>
+<script src="js/photoswipe-ui-default.min.js"></script>
+
+
+
 
 
 
@@ -705,6 +1085,216 @@
     });
 
     function sendContact(){var e=$("input#name").val();var t=$("input#email").val();var n=$("textarea#comments").val(); $.ajax({type:"POST",url:"contactFormHandling.php",data:{comments:JSON.stringify(n),email:JSON.stringify(t),name:JSON.stringify(e)}})}
+
+
+    //photoSwipe JS
+
+    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+        // parse slide data (url, title, size ...) from DOM elements
+        // (children of gallerySelector)
+        var parseThumbnailElements = function(el) {
+            var thumbElements = el.childNodes,
+                numNodes = thumbElements.length,
+                items = [],
+                figureEl,
+                linkEl,
+                size,
+                item;
+
+            for(var i = 0; i < numNodes; i++) {
+
+                figureEl = thumbElements[i]; // <figure> element
+
+                // include only element nodes
+                if(figureEl.nodeType !== 1) {
+                    continue;
+                }
+
+                linkEl = figureEl.children[0]; // <a> element
+
+                size = linkEl.getAttribute('data-size').split('x');
+
+                // create slide object
+                item = {
+                    src: linkEl.getAttribute('href'),
+                    w: parseInt(size[0], 10),
+                    h: parseInt(size[1], 10)
+                };
+
+
+
+                if(figureEl.children.length > 1) {
+                    // <figcaption> content
+                    item.title = figureEl.children[1].innerHTML;
+                }
+
+                if(linkEl.children.length > 0) {
+                    // <img> thumbnail element, retrieving thumbnail url
+                    item.msrc = linkEl.children[0].getAttribute('src');
+                }
+
+                item.el = figureEl; // save link to element for getThumbBoundsFn
+                items.push(item);
+            }
+
+            return items;
+        };
+
+        // find nearest parent element
+        var closest = function closest(el, fn) {
+            return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+        };
+
+        // triggers when user clicks on thumbnail
+        var onThumbnailsClick = function(e) {
+            e = e || window.event;
+            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+            var eTarget = e.target || e.srcElement;
+
+            // find root element of slide
+            var clickedListItem = closest(eTarget, function(el) {
+                return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+            });
+
+            if(!clickedListItem) {
+                return;
+            }
+
+            // find index of clicked item by looping through all child nodes
+            // alternatively, you may define index via data- attribute
+            var clickedGallery = clickedListItem.parentNode,
+                childNodes = clickedListItem.parentNode.childNodes,
+                numChildNodes = childNodes.length,
+                nodeIndex = 0,
+                index;
+
+            for (var i = 0; i < numChildNodes; i++) {
+                if(childNodes[i].nodeType !== 1) {
+                    continue;
+                }
+
+                if(childNodes[i] === clickedListItem) {
+                    index = nodeIndex;
+                    break;
+                }
+                nodeIndex++;
+            }
+
+
+
+            if(index >= 0) {
+                // open PhotoSwipe if valid index found
+                openPhotoSwipe( index, clickedGallery );
+            }
+            return false;
+        };
+
+        // parse picture index and gallery index from URL (#&pid=1&gid=2)
+        var photoswipeParseHash = function() {
+            var hash = window.location.hash.substring(1),
+                params = {};
+
+            if(hash.length < 5) {
+                return params;
+            }
+
+            var vars = hash.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                if(!vars[i]) {
+                    continue;
+                }
+                var pair = vars[i].split('=');
+                if(pair.length < 2) {
+                    continue;
+                }
+                params[pair[0]] = pair[1];
+            }
+
+            if(params.gid) {
+                params.gid = parseInt(params.gid, 10);
+            }
+
+            return params;
+        };
+
+        var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+            var pswpElement = document.querySelectorAll('.pswp')[0],
+                gallery,
+                options,
+                items;
+
+            items = parseThumbnailElements(galleryElement);
+
+            // define options (if needed)
+            options = {
+
+                // define gallery index (for URL)
+                galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                getThumbBoundsFn: function(index) {
+                    // See Options -> getThumbBoundsFn section of documentation for more info
+                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                        pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                        rect = thumbnail.getBoundingClientRect();
+
+                    return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                }
+
+            };
+
+            // PhotoSwipe opened from URL
+            if(fromURL) {
+                if(options.galleryPIDs) {
+                    // parse real index when custom PIDs are used
+                    // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                    for(var j = 0; j < items.length; j++) {
+                        if(items[j].pid == index) {
+                            options.index = j;
+                            break;
+                        }
+                    }
+                } else {
+                    // in URL indexes start from 1
+                    options.index = parseInt(index, 10) - 1;
+                }
+            } else {
+                options.index = parseInt(index, 10);
+            }
+
+            // exit if index not found
+            if( isNaN(options.index) ) {
+                return;
+            }
+
+            if(disableAnimation) {
+                options.showAnimationDuration = 0;
+            }
+
+            // Pass data to PhotoSwipe and initialize it
+            gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        // loop through all gallery elements and bind events
+        var galleryElements = document.querySelectorAll( gallerySelector );
+
+        for(var i = 0, l = galleryElements.length; i < l; i++) {
+            galleryElements[i].setAttribute('data-pswp-uid', i+1);
+            galleryElements[i].onclick = onThumbnailsClick;
+        }
+
+        // Parse URL and open gallery if it contains #&pid=3&gid=1
+        var hashData = photoswipeParseHash();
+        if(hashData.pid && hashData.gid) {
+            openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+        }
+    };
+
+    // execute above function
+    initPhotoSwipeFromDOM('.my-gallery');
+
 </script>
 
 </body>

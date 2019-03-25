@@ -1,0 +1,159 @@
+<?php
+//session_start();
+//?>
+<?php //require 'templates/head.php' ?>
+<?php //require 'templates/dbconnect.php' ?>
+<!---->
+<!--<div id="main_content_home">-->
+<!--    <div id="home_content_para">-->
+<!--        <h1 title="Welcome Pet Owner!"></h1>-->
+<!--        <p>Welcome to Lilac City Dog Walking & Care! Your search for a reliable, compassionate dog walker, pet and house sitting service in the North Spokane and South Hill neighborhoods of Spokane, Washington ends here.</p> <p>At Lilac City Dog Walking & Care, our mission is to provide loving, responsible care to your beloved pets without over-charging you. Unlike many of our competitors, we believe that optimal pet care can and should be achieved without breaking the bank. We are experienced with dogs of all breeds and sizes and are "bully-breed" friendly! Whether you need extended care options while out of town, are unable to exercise your pet, or work during the day, we are here to help!</p> <p>Please visit our "<a class="link2" title="FAQ" href="faq.html">Frequently Asked Questions</a>" page to get a better understanding of how we operate. To learn more about us please visit the "<a class="link2" title="About Us" href="about_us.html">About Us</a>" page for a detailed company-bio. Any time you have a question or want to schedule a complimentary 15-minute consultation with your pets, please <a class="link2" title="info@lilac-city-dogs.com" href="mailto:info@lilac-city-dogs.com"> email us</a> today!</p>-->
+<!---->
+<!---->
+<!--        <h4 title="Recent Updates"></h4>-->
+<!---->
+<!--        --><?php
+//
+//
+//        if (! ($message)) {
+//            echo "<h3>$message</h3>";
+//
+//
+//        }
+//
+//
+//        ?>
+<!--        <div id="main_update_contain">-->
+<!---->
+<!--        --><?php
+//
+//
+//
+//
+//
+//
+//        $con=mysqli_connect("localhost","csnyder_lilac","Drexler22","csnyder_lilac-dogs");
+//
+//            $message = '';
+//            $result = mysqli_query($con,'SELECT * FROM updates ORDER BY update_date DESC limit 1');   // query database  It's convention in sql to put key words in uppercase
+//           // $result = $dbh->query($sql);       // use query method to query sql variable
+//
+//
+//
+//            //display message in appropriate point in page
+//
+//
+////
+////$update_id,
+////$update_title,
+////$update_content,
+////$update_date
+//
+//        while(list($update_id,$update_title,$update_content,$update_date) = $result->fetch_row() ) {
+//            $trunky=substr($update_content, 0, 290);
+//
+//
+//            $format_date=date(" l F jS Y  g:i A", strtotime($update_date."-2 hours"));
+//            // Query your database here and get timestamp
+//
+//            echo "
+//
+//                    	<div class='update_title'><a href='update_show.php?update_id=$update_id'> $update_title</a><br/> <span class='updated2'>Posted: $format_date Spokane Time</span></div>
+//
+//
+//                    	<p> $trunky...<a class='link2' href='update_show.php?update_id=$update_id'> Read More</a></p><p> <a class='link2' href='previous_updates.php'>Past Updates</a></p>";
+//
+//
+//
+//        }
+//
+//        ?>
+<!--        </div>-->
+<!---->
+<!--        <p><img title="Lilac City Dog Walking &amp; Care, All breeds are created equal. Lynn Burt Owner/Operator, PO Box 10686, Spokane, WA, 99209, 509-294-3392" alt="Lilac City Dog Walking &amp; Care, All breeds are created equal. Lynn Burt Owner/Operator, PO Box 10686, Spokane, WA, 99209, 509-294-3392" class="biz-card" src="biz-card.jpg" ></p><br/>-->
+<!---->
+<!---->
+<!--    </div>-->
+<!--    <div class="fb-page" data-href="https://www.facebook.com/checkenginefree/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/checkenginefree/"><a href="https://www.facebook.com/checkenginefree/">checkenginefree.com</a></blockquote></div></div>-->
+<!--    <div id="social_credit_wrap"><a href="all_stars.html"><img class="meet-stars" alt="Meet The Lilac City Dog Walking &amp; Care All Stars!" title="Meet The Lilac City Dog Walking &amp; Care All Stars!" src="meet-our-stars.png"></a><img class="paypal" title="We Accept PayPal!" alt="We Accept PayPal!" src="paypal.png"><div id="social_media_home"><div class="fb-page" data-href="https://www.facebook.com/checkenginefree/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/checkenginefree/"><a href="https://www.facebook.com/checkenginefree/">checkenginefree.com</a></blockquote></div></div></div>&nbsp;<p class="small-caps">Thanks For Visiting!</p></div>-->
+<?php //require 'templates/footer.php'?>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="An excellent choice for all of your dog walking & watching needs.  We serve the North side and South Hill neighborhoods of Spokane, Washington.  ">
+    <meta name="keywords" content="dog walking, dogs, dog walk, pet care, pet sitter, pet sitting, Spokane, Northside, North side, South hill, Dog care, dog watching, pet watching, dog walking business, pet sitting service, best rates, pet sitting prices, fetch pet care, puppy care, pet nanny, pet sitters associate, pet service, spokane dog walking, www.spokanedogwalking.com">
+
+    <title>Home | Lilac City Dog Walking &amp; Care - Affordable Dog Walking, Pet care and House sitting</title>
+    <link rel="stylesheet" type="text/css" href="css/styling.css" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="TacoComponents/MenuMatic/MenuMatic_myNavigationMenu.css" />
+    <script type="text/javascript" src="MooTools/mootools.js"></script>
+    <script type="text/javascript" src="MenuMatic/MenuMatic.js"></script>
+    <link rel="stylesheet" type="text/css" href="MenuMatic/MenuMatic_myNavigationMenu.css" />
+
+    <link rel="icon"
+          type="image/ico"
+          href="paw-ico.png">
+</head>
+
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=590306801102510";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="wrapper_home">
+    <div id="main_header"><img title="Lilac City Dog Walking &amp; Care" height="300" width="850" alt="Lilac City Dogs" src="lilac-dogs-header.png"/></div>
+    <div id="main_nav">
+        <ul id="myNavigationMenu">
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="about_us.html" title="About Us">About Us</a></li>
+            <li><a href="services_offered.html" title="Services Offered">Services Offered</a></li>
+            <li><a href="downloads.html" title="Downloads">Downloads</a></li>
+            <li><a href="contact.php" title="Contact">Contact</a></li>
+            <li><a href="faq.html" title="FAQ">FAQ</a></li>
+        </ul>
+        <!-- Create a MenuMatic Instance -->
+        <script type="text/javascript" >
+            window.addEvent('load', function() {
+                var myMenu = new MenuMatic({
+                    id: 'myNavigationMenu',
+                    subMenusContainerId: 'myNavigationMenu_menuContainer',
+                    orientation: 'horizontal',
+                    effect: null,
+                    duration: 800,
+                    hideDelay: 1000,
+                    opacity: 100});
+            });
+        </script>
+
+    </div>
+    <div id="main_content_home">
+        <div id="home_content_para">
+            <h1 title="Welcome Pet Owner!"></h1>
+            <p>Welcome to Lilac City Dog Walking & Care! Your search for a reliable, compassionate dog walker, pet and house sitting service in the North Spokane and South Hill neighborhoods of Spokane, Washington ends here.</p> <p>At Lilac City Dog Walking & Care, our mission is to provide loving, responsible care to your beloved pets without over-charging you. Unlike many of our competitors, we believe that optimal pet care can and should be achieved without breaking the bank. We are experienced with dogs of all breeds and sizes and are "bully-breed" friendly! Whether you need extended care options while out of town, are unable to exercise your pet, or work during the day, we are here to help!</p> <p>Please visit our "<a class="link2" title="FAQ" href="faq.html">Frequently Asked Questions</a>" page to get a better understanding of how we operate. To learn more about us please visit the "<a class="link2" title="About Us" href="about_us.html">About Us</a>" page for a detailed company-bio. Any time you have a question or want to schedule a complimentary 15-minute consultation with your pets, please <a class="link2" title="info@lilac-city-dogs.com" href="mailto:info@lilac-city-dogs.com"> email us</a> today!</p>
+            <h4 title="Recent Updates"><span class="updated">Updated: September 10th, 2013</span></h4>
+
+            <p class="update_para">I am pleased to announce two new important updates to the site, the <a class="link2" title="All Stars" href="all_stars.html">All Stars</a> page.  This page puts a spotlight on the animals I am fortunate enough to take care of.  I also am pleased to announce the newly added a <a class="link2" title="Downloads" href="downloads.html">Downloads</a> page that features a link to where you can purchase The Dog & Cat Almanac which is an ebook that I recently authored.  The Downloads page also has information about other animal related causes that I am passionate about and also includes pet information forms I have all of my prospective clients fill out.</p>
+            <p><img title="Lilac City Dog Walking &amp; Care, All breeds are created equal. Lynn Burt Owner/Operator, PO Box 10686, Spokane, WA, 99209, 509-294-3392" alt="Lilac City Dog Walking &amp; Care, All breeds are created equal. Lynn Burt Owner/Operator, PO Box 10686, Spokane, WA, 99209, 509-294-3392" class="biz-card" src="biz-card.jpg" ></p>
+
+        </div>
+        <div id="social_credit_wrap"><a href="all_stars.html"><img class="meet-stars" alt="Meet The Lilac City Dog Walking &amp; Care All Stars!" title="Meet The Lilac City Dog Walking &amp; Care All Stars!" src="meet-our-stars.png"></a><img class="paypal" title="We Accept PayPal!" alt="We Accept PayPal!" src="paypal.png"><div id="social_media_home">Facebook/Social Media Feed Goes Here</div>&nbsp;<p class="small-caps">Thanks For Visiting!</p></div>
+
+        <div class="nav_home"><a title="Home" class="link" href="index.html">Home</a> <img alt="dog paw print" src="blue_paw.png"> <a title="About Us" class="link" href="about_us.html">About Us</a> <img alt="dog paw print" src="blue_paw.png"> <a title="Services Offered" class="link" href="services_offered.html">Services Offered</a> <img alt="dog paw print" src="blue_paw.png"> <a title="Downloads" class="link" href="downloads.html">Downloads</a> <img alt="dog paw print" src="blue_paw.png">  <a title="Contact" class="link" href="#">Contact</a> <img alt="dog paw print" src="blue_paw.png"> <a title="FAQ" class="link" href="faq.html">FAQ</a><p class="nav2">© Copyright 2013 Lilac City Dog Walking &amp; Care. All Rights Reserved</p></div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -110,6 +110,28 @@
 
 
 
+        .form-control:focus {
+            color: #000000;
+            background-color: #fff;
+            border-color: #000000;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0,0,0,.20);
+        }
+
+        label.error{
+
+            color: black;
+            background-color: #d2d6da;
+            padding:.5em;
+            font-family: calibri;
+            font-size: 1.1em;
+        }
+
+        label.resume-label {
+            font-size: 1.2em;
+            font-weight: 900;
+        }
+
     </style>
 
 </head>
@@ -590,7 +612,51 @@
 
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <br/>
-            <h1 class="text-center trebuchet lg-headers">Contact</h1>
+            <h1 id="contact_header" class="text-center trebuchet lg-headers"><i class="fas fa-envelope"></i> Contact Chris</h1>
+
+            <div id="contact_success">
+                <h1 class="trebuchet text-center">Thank you for Contacting Me!</h1>
+                <div id="contact_success_words">
+                    <p class="text-center calibri main-text">I will do my best to get back to you as soon as possible!</p>
+                    <p class="text-center calibri main-text">Thank you and have an excellent day!</p>
+                </div>
+            </div>
+
+            <div id="contact_form">
+                <form id="form1">
+                    <p class="calibri main-text">Please feel free to send me a message!  I will review what has been sent to me and get back to you as soon as possible!  Thank you for taking the time to look at my portfolio &amp; resume.</p>
+                    <br/>
+                    <div data-role="content">
+                        <div class="form-group trebuchet">
+                            <label class="resume-label" for="name" data-theme="d">Name</label>
+
+                            <div data-role="fieldcontainer">
+                            <input class="form-control" type="text" id="name" name="name" data-theme="a" placeholder="Please Enter Your Name"/>
+                            </div>
+
+                            </div>
+                        <br/>
+                        <div class="form-group trebuchet">
+                            <label class="resume-label" for="email" data-theme="d">E-mail</label>
+                        <div data-role="fieldcontainer">
+                            <input class="form-control" type="email" id="email" name="email" data-theme="a" placeholder="Please Enter Your Email"/>
+                        </div>
+
+                        </div>
+                        <br/>
+                        <div class="form-group trebuchet">
+                        <label class="resume-label" for="comments" data-theme="d">Message</label>
+                        <div data-role="fieldcontainer">
+                            <textarea class="form-control" id="comments" name="comments" data-theme="d" placeholder="Please Enter Your Message"></textarea>
+                        </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <input class="btn btn-lg btn-dark" type="submit" data-theme="a" value="Send Message" id="submit"/>
+                    <br/>
+                    <br/>
+                </form>
+            </div>
 
         </div>
 
@@ -600,8 +666,46 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--jquery form validation-->
+<script src="jquery.validate.min.js"></script>
+
+
+
+<!--contact form JS-->
+<script>
+    $(document).ready(function() {
+
+        $(".invalid_info_success").hide();
+        $("#contact_success").hide();
+    });
+
+    $("#form1").validate({
+        rules: {name: {required: true}, comments: {required: true}, email: {required: true}},
+        messages: {
+            name: {required: "<i class='fas fa-exclamation-circle'></i> Please enter your name so I know who is contacting me!"},
+            email: {required: "<i class='fas fa-exclamation-circle'></i> Please enter your email address so I know where to send a response to!"},
+            comments: {required: "<i class='fas fa-exclamation-circle'></i> Please enter your message so I will know why you are contacting me!"}
+        },
+        errorPlacement: function (e, t) {
+            e.prependTo(t.parent())
+        },
+        submitHandler: function (e) {
+            sendContact();
+            $("#form1").hide();
+            $("#contact_header").hide();
+            $("#contact_success").show();
+            $("#contact_success").css("visibility", "visible");
+            return false
+        }
+    });
+
+    function sendContact(){var e=$("input#name").val();var t=$("input#email").val();var n=$("textarea#comments").val(); $.ajax({type:"POST",url:"contactFormHandling.php",data:{comments:JSON.stringify(n),email:JSON.stringify(t),name:JSON.stringify(e)}})}
+</script>
+
 </body>
 </html>

@@ -425,6 +425,11 @@
                     </tr>
 
                     <tr>
+                        <td>Wordpress</td>
+                        <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
+
+                    <tr>
                         <td>Aptitude to Learn Unlisted Skill</td>
                         <td><div class="rating"><div class="stars"></div><div class="back" style="width:98%;"></div></div></td>
                     </tr>
@@ -1019,7 +1024,6 @@
                 </div>
 
 
-
                 <div class="col-sm-12 mt-5 col-md-6">
 
                     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
@@ -1099,6 +1103,99 @@
                         <br/>
                         <p>With this work project I learned quite a bit about how to get more complex database relationships to work with Laravel/Eloquent ORM.  This required the use of a many-to-many relationship to store information about the track and the playlist associated with it.  It also required a one-to-many relationship so that one license could have many playlists associated with it.  This admin interface was replacing a third-party paid service that the company had used for years to store audio files for instructional recordings.  This admin interface is useful because it also stores the audio files on AWS S3, and behaves as a true CRUD app both in the database and on the S3 side when Creating, Reading, Updating, or Deleting (cascade deletion of related parent/child records, and files- - depending on what is deleted) Tracks. In my capacity as a developer, I was 'full-stack' in the truest sense.  I created the database structure, coded the back-end, and front-end from scratch.  This project was completed in February 2019.</p></div>
                 </div>
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-finance-reporting-csv-tool.png" itemprop="contentUrl" data-size="2482x1646">
+                                <img src="images/tbh-finance-reporting-main.png" itemprop="thumbnail" alt="TBH Finance Crystal Reports replacement" />
+                            </a>
+                            <figcaption itemprop="caption description">TBH Crystal Reports replacement<br/> Page where most reports are run from... select desired report from dropdown, enter a date range, then click the 'Download Report' button to download a CSV.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-finance-reporting-by-state.png" itemprop="contentUrl" data-size="2482x1646">
+                                <img src="images/tbh-finance-reporting-by-state.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">TBH Crystal Reports replacement<br/> State based report.  First select desired state from dropdown, enter a date range, then click the 'Download Report' button to download a CSV.</figcaption>
+                        </figure>
+
+
+                    </div>
+                    <h6 class="trebuchet">TBH Crystal Reports Replacement<br/> Laravel/PHP</h6>
+                    <a href="#demo13" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo13" class="collapse calibri">
+                        <br/>
+                        <p>I created this internal reporting tool for TBH to better centralize several reports that the company's Accounting department utilizes in their daily duties.   It was also coded to be a more user-friendly experience when compared with Crystal Reports, which the company had been using before this app was introduced.  When a report is selected and a date range has been entered it will query the relevant database tables and generate a CSV file for easy viewing in Microsoft Excel.  I wrote the CSV creation script in vanilla PHP using the best practices instead of utilizing a Laravel package.</p></div>
+                </div>
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-timesheet-generator.png" itemprop="contentUrl" data-size="2482x1646">
+                                <img src="images/tbh-timesheet-generator-main.png" itemprop="thumbnail" alt="TBH/TLS Timesheet PDF generator" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Home/navigation page to appropriate timesheet generation Calendar.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-timesheet-generator-hourly-calendar.png" itemprop="contentUrl" data-size="2512x3048">
+                                <img src="images/tbh-timesheet-generator-hourly-calendar.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Hourly calendar PDF generation view.  You may select from the dropdown for each date any hours worked, sick, vacation, or Other (portion or whole days), and enter a note explaining Other types of absences.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-timesheet-generator-hourly-calendar-filled-out.png" itemprop="contentUrl" data-size="2512x3048">
+                                <img src="images/tbh-timesheet-generator-hourly-calendar-filled-out.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Hourly calendar filled out.  Once filled out, click the 'Download PDF of Timesheet' button and a PDF version of the calendar and proper entries will be downloaded.</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-timesheet-generator-hourly-pdf-output.png" itemprop="contentUrl" data-size="2482x1646">
+                                <img src="images/tbh-timesheet-generator-hourly-pdf-output.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Downloaded PDF version of hourly calendar with summary of hours worked, sick, vacation, other, and total of all. </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-timesheet-generator-salaried-calendar.png" itemprop="contentUrl" data-size="2512x2436">
+                                <img src="images/tbh-timesheet-generator-salaried-calendar.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Salary calendar PDF generation view.  You may select from the dropdown for each date any hours worked, sick, vacation, or Other, and enter a note explaining Other types of absences.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-timesheet-generator-salaried-calendar-filled-out.png" itemprop="contentUrl" data-size="2512x2436">
+                                <img src="images/tbh-timesheet-generator-salaried-calendar-filled-out.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Salary calendar filled out.  Once filled out, click the 'Download PDF of Timesheet' button and a PDF version of the calendar and proper entries will be downloaded.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images/tbh-timesheet-generator-salary-pdf-output.png" itemprop="contentUrl" data-size="2482x1646">
+                                <img src="images/tbh-timesheet-generator-salary-pdf-output.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Downloaded PDF version of salary calendar.</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Laravel Calendar based Timesheet PDF Generator</h6>
+                    <a href="#demo14" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo14" class="collapse calibri">
+                        <br/>
+                        <p>With this work project I utilized some knowledge I gained from another project where I generated PDFs based on an HTML/CSS template.  I created the project in Laravel with Bootstrap 4, and utilized wkhtmltopdf open source technology with a Laravel package called Snappy. This replaced the company's generic Excel spreadsheet method for keeping track of employee's dates worked and hours.</p></div>
+                </div>
+
 
 
 

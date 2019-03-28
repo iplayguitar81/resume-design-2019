@@ -144,6 +144,15 @@
             border: 2px solid #000000;
         }
 
+        /*media queries*/
+
+        /*max hide tab text */
+        @media screen and (max-width: 499px) {
+            span.tab-text {
+                display: none;
+            }
+        }
+
     </style>
 
 </head>
@@ -151,23 +160,23 @@
 
 <br/>
 <div class="container">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
         <li class="nav-item trebuchet">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#about-chris" role="tab" aria-controls="about-chris" aria-selected="true"><i class="fas fa-user"></i> About Chris</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#about-chris" role="tab" aria-controls="about-chris" aria-selected="true"><i class="fas fa-user"></i> <span class="tab-text">About Chris</span></a>
         </li>
 
         <li class="nav-item trebuchet">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false"><i class="fas fa-file-alt"></i> Resume</a>
-        </li>
-
-
-        <li class="nav-item trebuchet">
-            <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false"><i class="fas fa-file-alt"></i> <span class="tab-text">Resume</span></a>
         </li>
 
 
         <li class="nav-item trebuchet">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-envelope"></i> Contact</a>
+            <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false"><i class="fas fa-briefcase"></i> <span class="tab-text">Portfolio</span></a>
+        </li>
+
+
+        <li class="nav-item trebuchet">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-envelope"></i> <span class="tab-text">Contact</span></a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">

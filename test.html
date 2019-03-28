@@ -162,6 +162,36 @@
             color:#000000;
         }
 
+
+        /*portfolio experiments...*/
+
+        .card-img-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .card-img-wrap:after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            /*background: rgba(255,255,255,0.3);*/
+            opacity: 0;
+            transition: opacity .25s;
+        }
+        .card-img-wrap img {
+            transition: transform .25s;
+            width: 100%;
+        }
+        .card-img-wrap:hover img {
+            transform: scale(1.2);
+
+        }
+        .card-img-wrap:hover:after {
+            opacity: 1;
+
+        }
+
+
+
         /*media queries*/
 
         /*max hide tab text */
@@ -826,21 +856,21 @@
                     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/playlist-admin-crud-hub.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/playlist-admin-crud-hub.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/tbh-audio-main.png" itemprop="thumbnail" alt="TBH/TLS Audio Admin Interface" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH playlist admin CRUD</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/add-track.png" itemprop="contentUrl" data-size="2482x1674">
+                            <a href="images/add-track.png" itemprop="contentUrl" data-size="1241x837">
                                 <img src="images/add-track.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Create/Upload Track to S3 page</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/add-license.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/add-license.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/add-license.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Create Audio License page </figcaption>
@@ -848,7 +878,7 @@
 
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/add-playlist-by-license.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/add-playlist-by-license.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/add-playlist-by-license.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Create Playlist (name) w/ Associated License (one-to-many- - one license has many playlists) page </figcaption>
@@ -856,21 +886,21 @@
 
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/edit-track.png" itemprop="contentUrl" data-size="2482x1846">
+                            <a href="images/edit-track.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/edit-track.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Edit/Preview/Replace/Upload Audio Track to S3 page</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tracks-preview-index-page.png" itemprop="contentUrl" data-size="2482x4034">
+                            <a href="images/tracks-preview-index-page.png" itemprop="contentUrl" data-size="1241x2017">
                                 <img src="images/tracks-preview-index-page.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Index/Preview All Uploaded Audio Tracks page</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/playlist-edit-add-tracks.png" itemprop="contentUrl" data-size="2482x3028">
+                            <a href="images/playlist-edit-add-tracks.png" itemprop="contentUrl" data-size="1241x1514">
                                 <img src="images/playlist-edit-add-tracks.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Edit/Preview/Replace/Playlist Tracks page</figcaption>
@@ -878,14 +908,14 @@
 
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/custom-error-messages-on-delete.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/custom-error-messages-on-delete.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/custom-error-messages-on-delete.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Custom Delete Alert Confirmation message box. "Danger Will Robinson!" :) </figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/public-playlist-custom-audio-player.png" itemprop="contentUrl" data-size="2482x1906">
+                            <a href="images/public-playlist-custom-audio-player.png" itemprop="contentUrl" data-size="1241x953">
                                 <img src="images/public-playlist-custom-audio-player.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Audio Custom Audio Player of Playlist Public Facing Bootstrap 4/Responsive </figcaption>
@@ -907,14 +937,14 @@
                     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-finance-reporting-csv-tool.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/tbh-finance-reporting-csv-tool.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/tbh-finance-reporting-main.png" itemprop="thumbnail" alt="TBH Finance Crystal Reports replacement" />
                             </a>
                             <figcaption itemprop="caption description">TBH Crystal Reports replacement<br/> Page where most reports are run from... select desired report from dropdown, enter a date range, then click the 'Download Report' button to download a CSV.</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-finance-reporting-by-state.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/tbh-finance-reporting-by-state.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/tbh-finance-reporting-by-state.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">TBH Crystal Reports replacement<br/> State based report.  First select desired state from dropdown, enter a date range, then click the 'Download Report' button to download a CSV.</figcaption>
@@ -935,21 +965,21 @@
                     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-timesheet-generator.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/tbh-timesheet-generator.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/tbh-timesheet-generator-main.png" itemprop="thumbnail" alt="TBH/TLS Timesheet PDF generator" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Home/navigation page to appropriate timesheet generation Calendar.</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-timesheet-generator-hourly-calendar.png" itemprop="contentUrl" data-size="2512x3048">
+                            <a href="images/tbh-timesheet-generator-hourly-calendar.png" itemprop="contentUrl" data-size="1256x1524">
                                 <img src="images/tbh-timesheet-generator-hourly-calendar.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Hourly calendar PDF generation view.  You may select from the dropdown for each date any hours worked, sick, vacation, or Other (portion or whole days), and enter a note explaining Other types of absences.</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-timesheet-generator-hourly-calendar-filled-out.png" itemprop="contentUrl" data-size="2512x3048">
+                            <a href="images/tbh-timesheet-generator-hourly-calendar-filled-out.png" itemprop="contentUrl" data-size="1256x1524">
                                 <img src="images/tbh-timesheet-generator-hourly-calendar-filled-out.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Hourly calendar filled out.  Once filled out, click the 'Download PDF of Timesheet' button and a PDF version of the calendar and proper entries will be downloaded.</figcaption>
@@ -957,7 +987,7 @@
 
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-timesheet-generator-hourly-pdf-output.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/tbh-timesheet-generator-hourly-pdf-output.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/tbh-timesheet-generator-hourly-pdf-output.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Downloaded PDF version of hourly calendar with summary of hours worked, sick, vacation, other, and total of all. </figcaption>
@@ -965,21 +995,21 @@
 
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-timesheet-generator-salaried-calendar.png" itemprop="contentUrl" data-size="2512x2436">
+                            <a href="images/tbh-timesheet-generator-salaried-calendar.png" itemprop="contentUrl" data-size="1256x1218">
                                 <img src="images/tbh-timesheet-generator-salaried-calendar.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Salary calendar PDF generation view.  You may select from the dropdown for each date any hours worked, sick, vacation, or Other, and enter a note explaining Other types of absences.</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-timesheet-generator-salaried-calendar-filled-out.png" itemprop="contentUrl" data-size="2512x2436">
+                            <a href="images/tbh-timesheet-generator-salaried-calendar-filled-out.png" itemprop="contentUrl" data-size="1256x1218">
                                 <img src="images/tbh-timesheet-generator-salaried-calendar-filled-out.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Salary calendar filled out.  Once filled out, click the 'Download PDF of Timesheet' button and a PDF version of the calendar and proper entries will be downloaded.</figcaption>
                         </figure>
 
                         <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="images/tbh-timesheet-generator-salary-pdf-output.png" itemprop="contentUrl" data-size="2482x1646">
+                            <a href="images/tbh-timesheet-generator-salary-pdf-output.png" itemprop="contentUrl" data-size="1241x823">
                                 <img src="images/tbh-timesheet-generator-salary-pdf-output.png" itemprop="thumbnail" alt="Image description" />
                             </a>
                             <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Downloaded PDF version of salary calendar.</figcaption>
@@ -1633,7 +1663,17 @@
                         rect = thumbnail.getBoundingClientRect();
 
                     return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-                }
+                },
+
+//                getDoubleTapZoom: function(isMouseClick, item) {
+//                    if(isMouseClick) {
+//                        return .8; //<---- This 4
+//                    } else {
+//                        return item.initialZoomLevel < 0.7 ? .5 : .5; //<---- 4 here
+//                    }
+//                },
+//                maxSpreadZoom: .5 //<---- and this 4 here
+
 
             };
 

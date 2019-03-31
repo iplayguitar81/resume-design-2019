@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -19,6 +21,11 @@
 
         .trebuchet {
             font-family: 'Trebuchet MS';
+        }
+
+
+        .portrait-about{
+            border: 3px solid #6c757d;
         }
 
         h1 {
@@ -73,14 +80,20 @@
             transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
 
+        .h3-resume {
+            font-size: 1.45rem;
+
+        }
 
         .rating {
             width: 150px;
             height: 30px;
             position: relative;
+            margin-left: auto;
+            margin-right: auto;
         }
         .stars {
-            background: url(stars-newer-bg-lg.png);
+            background: url(images-new/stars-newer-bg-lg.png);
             z-index: 10;
             position: absolute;
             top: 0;
@@ -103,30 +116,126 @@
 
 
 
+        .form-control:focus {
+            color: #000000;
+            background-color: #fff;
+            border-color: #000000;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0,0,0,.20);
+        }
+
+        label.error{
+
+            color: black;
+            background-color: #d2d6da;
+            padding:.5em;
+            font-family: calibri;
+            font-size: 1.1em;
+        }
+
+        label.resume-label {
+            font-size: 1.2em;
+            font-weight: 900;
+        }
+
+        .my-gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #000000;
+        }
+
+        /*portfolio styles*/
+
+        a.port-links{
+
+            color: #000000;
+
+        }
+
+        a.port-links:hover{
+            color:#000000;
+        }
+
+        a.port-links:visited{
+            color:#000000;
+        }
+
+
+        /*portfolio experiments...*/
+
+        .card-img-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .card-img-wrap:after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            /*background: rgba(255,255,255,0.3);*/
+            opacity: 0;
+            transition: opacity .25s;
+        }
+        .card-img-wrap img {
+            transition: transform .25s;
+            width: 100%;
+        }
+        .card-img-wrap:hover img {
+            transform: scale(1.2);
+
+        }
+        .card-img-wrap:hover:after {
+            opacity: 1;
+
+        }
+
+
+        /*media queries*/
+
+        /*max hide tab text */
+        @media screen and (max-width: 499px) {
+            span.tab-text {
+                display: none;
+            }
+        }
+
     </style>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137370451-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137370451-1');
+    </script>
+
+
 
 </head>
 <body>
 
-    <br/>
-    <div class="container">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+<br/>
+<div class="container">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
         <li class="nav-item trebuchet">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#about-chris" role="tab" aria-controls="about-chris" aria-selected="true"><i class="fas fa-user"></i> About Chris</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#about-chris" role="tab" aria-controls="about-chris" aria-selected="true"><i class="fas fa-user"></i> <span class="tab-text">About Chris</span></a>
         </li>
 
         <li class="nav-item trebuchet">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false"><i class="fas fa-file-alt"></i> Resume</a>
-        </li>
-
-
-        <li class="nav-item trebuchet">
-            <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false"><i class="fas fa-file-alt"></i> <span class="tab-text">Resume</span></a>
         </li>
 
 
         <li class="nav-item trebuchet">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-envelope"></i> Contact</a>
+            <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false"><i class="fas fa-briefcase"></i> <span class="tab-text">Portfolio</span></a>
+        </li>
+
+
+        <li class="nav-item trebuchet">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-envelope"></i> <span class="tab-text">Contact</span></a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -136,20 +245,18 @@
 
                 <div class="row">
                     <div class="col-lg-3 offset-lg-3 col-md-12 col-sm-12 col-12 order-1 order-lg-1 order-sm-1">
-                        <img src="csnyder.png" class="img-fluid tutorials-hub-img mx-auto d-block rounded-circle" alt="Chris Snyder">
+                        <img src="images-new/csnyder.png" class="img-fluid portrait-about mx-auto d-block rounded-circle" alt="Chris Snyder">
                     </div>
 
                     <div class="col-lg-4 col-md-12 col-sm-12 col-12 order-2 order-lg-2 order-sm-2 mr-3">
 
                         <h1 class="text-center trebuchet lg-headers">Chris Snyder</h1>
                         <h3 class="text-center trebuchet text-muted">Full Stack Developer</h3>
-                        <h3 class="text-center">
+                        <h2 class="text-center">
                             <a class="icon-link" href="https://www.linkedin.com/in/chris-snyder-49956610" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <i class="fab fa-github-square"></i>
-                            <i class="fas fa-envelope-square"></i>
-                            <i class="fas fa-phone-square"></i>
-
-                        </h3>
+                            <a class="icon-link" href="https://github.com/iplayguitar81" target="_blank"><i class="fab fa-github-square"></i></a>
+                            <a class="icon-link tab-link" href="#contact" aria-controls="contact"><i class="fas fa-envelope-square"></i></a>
+                        </h2>
                     </div>
 
                 </div>
@@ -157,8 +264,10 @@
                 <div class="row">
 
                     <div class="col-12">
-                        <p class="calibri main-text">Hello! I am Chris Snyder. I recently graduated from Washington State University magna cum laude with a BA in Management Information Systems. Prior to that I completed three degrees (all with honors) at Spokane Community College including an AAS in Software Development, an AA in Business, and an AA in Arts. I am currently seeking employment as a Full Stack Web Developer but am interested in hearing about any other technical or professional career opportunities that staffing professionals wish to contact me about.</p>
+                        <p class="calibri main-text">Hello! My name is Chris Snyder and I have been working full-time as a professional Full Stack Developer since November 2017, but am always interested in hearing about other opportunities where my expertise could be utilized.  In August 2017, I graduated from Washington State University magna cum laude with a BBA in Management Information Systems.  Prior to that I completed three degrees (all with honors) at Spokane Community College including an AAS in Software Development, an AA in Business, and an AA in Arts.  I have an excellent aptitude for learning new technical skills and a proven track record of becoming proficient with them in a short amount of time.</p>
 
+                        <h2 class="trebuchet lg-headers text-center"> <i class="fas fa-guitar"></i> Hobbies &amp; Interests <i class="fas fa-bicycle"></i></h2>
+                        <p class="calibri main-text">I enjoy spending quality time with family and friends.  I greatly enjoy humor and making others laugh and smile.  For fun I like to hike, bike, listen to music, collect vinyl records, play guitar, sing, and write songs.  I also enjoy doing home improvement projects, and working outside during the warmer months, tending to an impressive vegetable garden.  I am a basketball fan and my favorite NBA team is the Portland Trail Blazers.  Even though I attended WSU (Go Cougs!), I am a huge fan of Gonzaga’s basketball team.  When I am not busy with work, family, friends, or enjoying the other hobbies or interests mentioned, I spend a great deal of time expanding & refining my technical skills by learning as much as I can about software, coding, web development &amp; computers.  I truly love and am satisfied by what I do professionally.  In fact, I enjoy it so much that I am regularly working on professional or personal coding projects for hours after putting in a full day of effort at work.</p>
                     </div>
 
                 </div>
@@ -170,98 +279,89 @@
         <div class="tab-pane fade" id="resume" role="tabpanel" aria-labelledby="resume-tab">
             <br/>
 
+            <div class="container">
+                <h1 class="trebuchet lg-headers text-center"><i class="fas fa-file-alt"></i> Resume <a class="btn btn-sm btn-dark" href="CSnyder-Resume-March-30th-2019.pdf"><i class="fas fa-download"></i> PDF</a></h1>
+
             <div class="row">
 
                 <div class="col-lg-8 col-12">
                     <h2 class="trebuchet lg-headers"><i class="fas fa-laptop-code"></i> Experience</h2>
                     <br/>
 
-                    <div class="row">
-                        <div class="col-lg-12">
+
                             <span class="badge badge-dark mb-2 trebuchet">Nov 2017 - Present</span>
-                            <h3 class="trebuchet">Full Stack Developer | Triad Behavioral Health</h3>
-                            <p class="calibri">During my tenure with the company I have completed a multitude of projects using HTML5, CSS, Bootstrap 3/4, JavaScript, jQuery, Laravel, VBScript, C#, Git, AWS, Docker, and SQL.  I have maintained an exceptional level of customer service while collaborating with team members on project requirements, involving both front-end & back-end development and have successfully met deadlines.  The projects I have completed on my own or as a collaborative effort have had a noticeably positive effect on revenue.</p>
+                            <h3 class="trebuchet h3-resume">Full Stack Developer | Triad Learning Systems</h3>
+                            <p class="calibri">During my tenure with the company I have completed a multitude of projects using AWS, Bootstrap 3/4, C#, CSS3, Docker, Git, HTML5, JavaScript, jQuery, Laravel, SQL, Symfony, and VB Script.  I have maintained an exceptional level of customer service while collaborating with team members on project requirements, involving both front-end & back-end development and have successfully met or exceeded deadlines.  The projects I have completed for TLS on my own or as a collaborative effort have had a considerably positive effect on company revenue.</p>
                             <hr/>
-                        </div>
 
-
-
-                        <div class="col-lg-12">
                             <span class="badge badge-dark mb-2 trebuchet">2012 - Present</span>
-                            <h3 class="trebuchet">Freelance Web Developer</h3>
+                            <h3 class="trebuchet h3-resume">Freelance Web Developer</h3>
                             <p class="calibri">Since earning my first software/web development related certificate in June 2013 at Spokane Community College I have worked on several projects part time while continuing to pursue my education which has also helped me to gain experience in languages or technology that I did not learn while attending school. Some of the projects I have completed are available to view in the Portfolio section of this webpage!</p>
                             <hr/>
-                        </div>
 
-                        <div class="col-lg-12">
                             <span class="badge badge-dark mb-2 trebuchet">Jan 2010 - Feb 2012</span>
-                            <h3 class="trebuchet">IT Help Desk | Team Spirit America</h3>
+                            <h3 class="trebuchet h3-resume">IT Help Desk | Team Spirit America</h3>
                             <p class="calibri">Helped staff in troubleshooting and resolving technical computing issues, repaired malfunctioning or otherwise inoperable computers and hardware when necessary, served as customer support and technical liaison to CEO, staff members and vendors. Monitored internet based lead providing partner companies that TSA did business with utilizing proprietary software.</p>
                             <hr/>
-                        </div>
 
-                    </div>
 
                     <h2 class="trebuchet lg-headers"> <i class="fas fa-graduation-cap"></i> Education</h2>
                     <br/>
 
-                    <div class="row">
-
-                        <div class="col-lg-12">
                             <span class="badge badge-dark mb-2 trebuchet">Aug 2015 - Aug 2017</span>
-                            <h3 class="trebuchet"><img class="img-fluid" src="wsu-icon-transparent.png" alt="Washington State University:  Go Cougs!"> Washington State University</h3>
+                            <br/>
+                            <h3 class="trebuchet h3-resume"><img class="img-fluid" src="images-new/wsu-icon-transparent.png" alt="Washington State University:  Go Cougs!"> Washington State University</h3>
                             <p class="calibri">I attended Washington State University starting August 2015 and completed earning my BBA in Management Information Systems magna cum laude August 2017.</p>
                             <h5 class="trebuchet text-muted">Degree Earned</h5>
 
                             <table class="table calibri">
                                 <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Degree</th>
-                                    <th scope="col">Completed</th>
-                                    <th scope="col">GPA</th>
+                                <tr class="d-flex">
+                                    <th class="col-4" scope="col">Degree</th>
+                                    <th class="col-4" scope="col">Completed</th>
+                                    <th class="col-4" scope="col">GPA</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Management Information Systems<br/>BBA<br/>Magna cum laude</td>
-                                    <td>Aug 2017</td>
-                                    <td>3.82</td>
+                                <tr class="d-flex">
+                                    <td class="col-4">Management Information Systems<br/>BBA<br/>Magna cum laude</td>
+                                    <td class="col-4">Aug 2017</td>
+                                    <td class="col-4">3.82</td>
                                 </tr>
                                 </tbody>
                             </table>
                             <br/>
                             <hr/>
-                        </div>
 
-                        <div class="col-lg-12">
                             <span class="badge badge-dark mb-2 trebuchet">Jul 2012 - Jun 2015</span>
-                            <h3 class="trebuchet"><img class="img-fluid" src="scc-logo.png" alt="Spokane Community College:  Go Squatch!"> Spokane Community College</h3>
+                            <br/>
+                            <h3 class="trebuchet h3-resume"><img class="img-fluid" src="images-new/scc-logo.png" alt="Spokane Community College:  Go Squatch!"> Spokane Community College</h3>
                             <p class="calibri">I started attending Spokane Community College in July 2012 and initially decided to pursue my AAS in Software Development. In the process, I made the decision to continue pursuing my education with a goal of attending WSU.  I earned two more degrees along the way in order to earn as many of my prerequisites towards my BA as possible.</p>
                             <h5 class="trebuchet text-muted">Degrees Earned</h5>
 
                             <table class="table calibri">
                                 <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Degree</th>
-                                    <th scope="col">Completed</th>
-                                    <th scope="col">GPA</th>
+                                <tr class="d-flex">
+                                    <th class="col-4" scope="col">Degree</th>
+                                    <th class="col-4" scope="col">Completed</th>
+                                    <th class="col-4" scope="col">GPA</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Software Development<br/>AAS<br/></td>
-                                    <td>Dec 2014</td>
-                                    <td>3.88</td>
+                                <tr class="d-flex">
+                                    <td class="col-4">Software Development<br/>AAS<br/></td>
+                                    <td class="col-4">Dec 2014</td>
+                                    <td class="col-4">3.88</td>
                                 </tr>
-                                <tr>
-                                    <td>Associates in Arts<br/>AA<br/></td>
-                                    <td>Jun 2015</td>
-                                    <td>—</td>
+                                <tr class="d-flex">
+                                    <td class="col-4">Associates in Arts<br/>AA<br/></td>
+                                    <td class="col-4">Jun 2015</td>
+                                    <td class="col-4">—</td>
                                 </tr>
-                                <tr>
-                                    <td>Associates in Business<br/>AA<br/></td>
-                                    <td>Jun 2015</td>
-                                    <td>—</td>
+                                <tr class="d-flex">
+                                    <td class="col-4">Associates in Business<br/>AA<br/></td>
+                                    <td class="col-4">Jun 2015</td>
+                                    <td class="col-4">—</td>
                                 </tr>
 
                                 </tbody>
@@ -269,31 +369,31 @@
                             <h5 class="trebuchet text-muted">Certificates Earned</h5>
                             <table class="table calibri">
                                 <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Certificate</th>
-                                    <th scope="col">Date Earned</th>
+                                <tr class="d-flex">
+                                    <th class="col-6" scope="col">Certificate</th>
+                                    <th class="col-6" scope="col">Date Earned</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Mobile Development</td>
-                                    <td>Dec 2014</td>
+                                <tr class="d-flex">
+                                    <td class="col-6">Mobile Development</td>
+                                    <td class="col-6">Dec 2014</td>
                                 </tr>
-                                <tr>
-                                    <td>Web Design</td>
-                                    <td>Jun 2014</td>
+                                <tr class="d-flex">
+                                    <td class="col-6">Web Design</td>
+                                    <td class="col-6">Jun 2014</td>
                                 </tr>
-                                <tr>
-                                    <td>Web Developer</td>
-                                    <td>Mar 2014</td>
+                                <tr class="d-flex">
+                                    <td class="col-6">Web Developer</td>
+                                    <td class="col-6">Mar 2014</td>
                                 </tr>
-                                <tr>
-                                    <td>.NET Developer</td>
-                                    <td>Mar 2014</td>
+                                <tr class="d-flex">
+                                    <td class="col-6">.NET Developer</td>
+                                    <td class="col-6">Mar 2014</td>
                                 </tr>
-                                <tr>
-                                    <td>Computer Science</td>
-                                    <td>Jun 2013</td>
+                                <tr class="d-flex">
+                                    <td class="col-6">Computer Science</td>
+                                    <td class="col-6">Jun 2013</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -301,340 +401,1373 @@
                             <h5 class="trebuchet text-muted">Scholarships</h5>
                             <table class="table calibri">
                                 <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Scholarship</th>
-                                    <th scope="col">Awarded</th>
+                                <tr class="d-flex">
+                                    <th class="col-6" scope="col">Scholarship</th>
+                                    <th class="col-6" scope="col">Awarded</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Community Colleges of Spokane Alumni Association Scholarship</td>
-                                    <td>2013-2014</td>
+                                <tr class="d-flex">
+                                    <td class="col-6">Community Colleges of Spokane Alumni Association Scholarship</td>
+                                    <td class="col-6">2013-2014</td>
                                 </tr>
-                                <tr>
-                                    <td>Community Colleges of Spokane Alumni Association Scholarship</td>
-                                    <td>2014-2015</td>
+                                <tr class="d-flex">
+                                    <td class="col-6">Community Colleges of Spokane Alumni Association Scholarship</td>
+                                    <td class="col-6">2014-2015</td>
                                 </tr>
                                 </tbody>
                             </table>
                             <hr/>
-                        </div>
                     </div>
 
+            <div class="col-lg-4 col-12">
+                <h2 class="trebuchet lg-headers text-center">Skills <i class="fas fa-code"></i></h2>
 
-                    <div class="col-lg-12">
-                        <br/>
+                <h5 class="trebuchet text-muted">Coding</h5>
+                <table class="table calibri">
 
-                        <h2 class="trebuchet lg-headers"> <i class="fas fa-guitar"></i> Hobbies &amp; Interests <i class="fas fa-bicycle"></i></h2>
-                        <p class="calibri">For fun I like to hike, bike, listen to music, collect vinyl records, play guitar, sing and write songs. I also enjoy doing home improvement projects around my house, working in my yard and vegetable gardening. I also enjoy spending time with family & friends. When I am not busy working or doing the other hobbies mentioned I spend a great deal of time further developing my technical skills by learning as much as I can about software, coding and web development. I am constantly learning about new technologies and am committed to absorbing as much as I can. In particular, I do what I can to keep up with MVC frameworks. I have a goal to learn as many frameworks as possible since I greatly enjoy and appreciate that type of web application development environment.</p>
+                    <tbody>
 
-                    </div>
+                    <tr class="d-flex">
+                        <td class="col-6">Aptitude to Learn Unlisted Skill</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:98%;"></div></div></td>
+                    </tr>
 
-                </div>
 
+                    <tr class="d-flex">
+                        <td class="col-6">ASP.NET MVC</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
+                    </tr>
 
-                <div class="col-lg-4 col-12">
-                    <h2 class="trebuchet lg-headers text-center">Skills <i class="fas fa-code"></i></h2>
+                    <tr class="d-flex">
+                        <td class="col-6">Bootstrap 3/4</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                    <h5 class="trebuchet text-muted">Coding</h5>
-                    <table class="table calibri">
+                    <tr class="d-flex">
+                        <td class="col-6">C#</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:83%;"></div></div></td>
+                    </tr>
 
-                        <tbody>
-                        <tr>
-                            <td>HTML5/CSS</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">HTML5/CSS3</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Bootstrap 3/4</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Java</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Javascript/jQuery</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Javascript</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:92%;"></div></div></td>
+                    </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">jQuery</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Responsive Design</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Laravel</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>C#</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">PHP</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Visual Basic</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
-                        </tr>
 
-                        <tr>
-                            <td>ASP.NET MVC</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Responsive Design</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>PHP</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Ruby</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Laravel</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">Ruby on Rails</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Ruby</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
-                        </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">SQL</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Ruby on Rails</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Symfony</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>SQL</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
-                        </tr>
 
-                        <tr>
-                            <td>Java</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Visual Basic</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Aptitude to Learn Unlisted Skill</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:98%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Wordpress</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
 
-                    <h5 class="trebuchet text-muted">Methodologies/DevOps</h5>
-                    <table class="table calibri">
+                <h5 class="trebuchet text-muted">Methodologies/DevOps</h5>
+                <table class="table calibri">
 
-                        <tbody>
+                    <tbody>
 
-                        <tr>
-                            <td>Agile Development</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Agile Development</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Docker</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Docker</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">LEMP</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
-                        </tbody>
-                    </table>
+                    <tr class="d-flex">
+                        <td class="col-6">VPS</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:85%;"></div></div></td>
+                    </tr>
 
 
-                    <h5 class="trebuchet text-muted">Software</h5>
-                    <table class="table calibri">
 
-                        <tbody>
-                        <tr>
-                            <td>Microsoft Office</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
-                        </tr>
+                    </tbody>
+                </table>
 
-                        <tr>
-                            <td>Git/Github</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
-                        </tr>
 
+                <h5 class="trebuchet text-muted">Software</h5>
+                <table class="table calibri">
 
-                        <tr>
-                            <td>Visual Studio</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
-                        </tr>
+                    <tbody>
 
-                        <tr>
-                            <td>JetBrains IDE's</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Adobe Flash</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Adobe Photoshop</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Adobe Photoshop</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>SQL Server</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
-                        </tr>
-
-                        <tr>
-                            <td>Microsoft Project</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
-                        </tr>
-
-                        <tr>
-                            <td>Microsoft Visio</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>Tableau</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Git/Github</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
+                    </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">JetBrains IDE's</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Adobe Flash</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Microsoft Office</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
+                    </tr>
 
-                        </tbody>
-                    </table>
+                    <tr class="d-flex">
+                        <td class="col-6">Microsoft Project</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
+                    </tr>
 
-                    <h5 class="trebuchet text-muted">Operating Systems</h5>
-                    <table class="table calibri">
+                    <tr class="d-flex">
+                        <td class="col-6">Microsoft Visio</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:70%;"></div></div></td>
+                    </tr>
 
-                        <tbody>
+                    <tr class="d-flex">
+                        <td class="col-6">SQL Server</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Windows</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Tableau</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Mac</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Tower</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Android</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Visual Studio</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>iOS</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">VS Code</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
 
 
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
 
+                <h5 class="trebuchet text-muted">Operating Systems</h5>
+                <table class="table calibri">
 
-                    <h5 class="trebuchet text-muted">Business</h5>
-                    <table class="table calibri">
+                    <tbody>
 
-                        <tbody>
+                    <tr class="d-flex">
+                        <td class="col-6">Android</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:90%;"></div></div></td>
+                    </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">iOS</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Responsible</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Mac</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Collaboration</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
-                        </tr>
+                    <tr class="d-flex">
+                        <td class="col-6">Windows</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
 
-                        <tr>
-                            <td>Ability to Meet Deadlines</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
-                        </tr>
 
-                        <tr>
-                            <td>Learning New Skills</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td>Organization</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:98%;"></div></div></td>
-                        </tr>
+                    </tbody>
 
-                        <tr>
-                            <td>Typing (90+ WPM)</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
+                </table>
 
-                        <tr>
-                            <td>Customer Service</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
+                <h5 class="trebuchet text-muted">Business</h5>
+                <table class="table calibri">
 
-                        <tr>
-                            <td>Attention to Detail</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td>Phone Etiquette</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td>Management Experience</td>
-                            <td><div class="rating"><div class="stars"></div><div class="back" style="width:75%;"></div></div></td>
-                        </tr>
+                    <tbody>
 
-                        </tbody>
-                    </table>
+                    <tr class="d-flex">
+                        <td class="col-6">Ability to Meet Deadlines</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
+                    </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">Attention to Detail</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
+                    </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">Collaboration</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
+                    </tr>
 
-                </div>
+                    <tr class="d-flex">
+                        <td class="col-6">Customer Service</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
+                    </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">Learning New Skills</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
+                    </tr>
 
+                    <tr class="d-flex">
+                        <td class="col-6">Management Experience</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:80%;"></div></div></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td class="col-6">Organization</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:98%;"></div></div></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td class="col-6">Phone Etiquette</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:95%;"></div></div></td>
+                    </tr>
+
+
+                    <tr class="d-flex">
+                        <td class="col-6">Responsible</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td class="col-6">Team work</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:100%;"></div></div></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td class="col-6">Typing <br/>(90+ WPM)</td>
+                        <td class="col-6"><div class="rating"><div class="stars"></div><div class="back" style="width:99%;"></div></div></td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
 
             </div>
 
-            <!--<div class="row">-->
+                </div>
 
-                <!--<div class="col-lg-8 col-12">-->
-                    <!--<br/>-->
-
-                    <!--<h2 class="trebuchet lg-headers"> <i class="fas fa-guitar"></i> Hobbies &amp; Interests <i class="fas fa-bicycle"></i></h2>-->
-                    <!--<p class="calibri">For fun I like to hike, bike, listen to music, collect vinyl records, play guitar, sing and write songs. I also enjoy doing home improvement projects around my house, working in my yard and vegetable gardening. I also enjoy spending time with family & friends. When I am not busy working or doing the other hobbies mentioned I spend a great deal of time further developing my technical skills by learning as much as I can about software, coding and web development. I am constantly learning about new technologies and am committed to absorbing as much as I can. In particular, I do what I can to keep up with MVC frameworks. I have a goal to learn as many frameworks as possible since I greatly enjoy and appreciate that type of web application development environment.</p>-->
-
-                <!--</div>-->
-
-            <!--</div>-->
-
-
-
+            </div>
 
         </div>
 
         <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
-            Portfolio
+            <br/>
+            <h1 class="text-center trebuchet lg-headers"><i class="fas fa-briefcase"></i> Portfolio</h1>
+            <p class="main-text calibri">This section of my site is dedicated to some work I have completed and felt appropriate to showcase.  If you click on an image on this page, you will be opening up a navigable gallery for a particular project which includes a technical description of each image.  If you click on an accompanying 'More Info' button then you will be able to read more about a particular project.</p>
+
+           <!--beginning of portfolio galleries-->
+            <div class="row mx-auto">
+
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-home.png" itemprop="contentUrl" data-size="995x2979">
+                                <img src="images-new/triad-behavioral-health-main.png" itemprop="thumbnail" alt="Bootstrap 4 Custom Triad Behavioral Health theme" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> Triad Behavioral Health home page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-custom-dropdown-example.png" itemprop="contentUrl" data-size="937x544">
+                                <img src="images-new/triad-behavioral-health-custom-dropdown-example.png" itemprop="thumbnail" alt="Bootstrap 4 Custom Triad Behavioral Health theme" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH Custom dropdown upper navigation menu example</figcaption>
+                        </figure>
+
+
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-who_we_are.png" itemprop="contentUrl" data-size="995x2805">
+                                <img src="images-new/triad-behavioral-health-who_we_are.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site <br/>TBH Who We Are page</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-our_story.png" itemprop="contentUrl" data-size="995x3493">
+                                <img src="images-new/triad-behavioral-health-our_story.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site <br/>TBH Our Story page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-our_experts.png" itemprop="contentUrl" data-size="995x16640">
+                                <img src="images-new/triad-behavioral-health-our_experts.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site <br/>TBH Our Experts page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-our_leadership.png" itemprop="contentUrl" data-size="995x4428">
+                                <img src="images-new/triad-behavioral-health-our_leadership.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site <br/>TBH Our Leadership page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-our_brands.png" itemprop="contentUrl" data-size="995x3240">
+                                <img src="images-new/triad-behavioral-health-our_brands.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site <br/>TBH Our Brands page</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-research_institute.png" itemprop="contentUrl" data-size="995x2993">
+                                <img src="images-new/triad-behavioral-health-research_institute.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site <br/>TBH Research Institute page</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-why_partner_with_triad.png" itemprop="contentUrl" data-size="995x1538">
+                                <img src="images-new/triad-behavioral-health-why_partner_with_triad.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH "Why Partner with Triad?" page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-educational_partnerships.png" itemprop="contentUrl" data-size="995x4641">
+                                <img src="images-new/triad-behavioral-health-educational_partnerships.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH Educational Partnership contact page with reCAPTCHA </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-organizational_partnerships.png" itemprop="contentUrl" data-size="995x4827">
+                                <img src="images-new/triad-behavioral-health-organizational_partnerships.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH Organizational Partnership contact page with reCAPTCHA </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-valued_partners.png" itemprop="contentUrl" data-size="995x1319">
+                                <img src="images-new/triad-behavioral-health-valued_partners.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH Valued Partners/testimonials preview page</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-testimonials.png" itemprop="contentUrl" data-size="995x2297">
+                                <img src="images-new/triad-behavioral-health-testimonials.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH Testimonials page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-contact.png" itemprop="contentUrl" data-size="995x1494">
+                                <img src="images-new/triad-behavioral-health-contact.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH Contact page with reCAPTCHA </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/triad-behavioral-health-sitemap.png" itemprop="contentUrl" data-size="995x1734">
+                                <img src="images-new/triad-behavioral-health-sitemap.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Bootstrap 4 Theme/Laravel Site<br/> TBH Sitemap page </figcaption>
+                        </figure>
+
+                    </div>
+
+                    <h6 class="trebuchet">Custom Bootstrap 4 Theme/Laravel Site<br/><a href="https://www.triadbehavioralhealth.com" class="port-links" target="_blank">TriadBehavioralHealth.com</a></h6>
+                    <a href="#demo11" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo11" class="collapse calibri">
+                        <br/>
+                        <p>This was the first project I completed at Triad Behavioral Health.  It is a custom Bootstrap 4 theme that is based off of mockups provided to me by the company's graphic designers.  The site is fully responsive and I am quite proud of how it turned out.  It is practically a pixel perfect representation of the design mockups I was given.  I learned a lot about Bootstrap 4 in the process of creating this site, and particularly how to stack elements in my desired orders at different screen sizes.  This site can be viewed at: <br/><a href="https://www.triadbehavioralhealth.com" target="_blank">https://www.triadbehavioralhealth.com</a></p></div>
+                </div>
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/playlist-admin-crud-hub.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/tbh-audio-main.png" itemprop="thumbnail" alt="TBH/TLS Audio Admin Interface" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH playlist admin CRUD</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/add-track.png" itemprop="contentUrl" data-size="1241x837">
+                                <img src="images-new/add-track.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Create/Upload Track to S3 page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/add-license.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/add-license.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Create Audio License page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/add-playlist-by-license.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/add-playlist-by-license.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Create Playlist (name) w/ Associated License (one-to-many- - one license has many playlists) page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/edit-track.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/edit-track.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Edit/Preview/Replace/Upload Audio Track to S3 page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tracks-preview-index-page.png" itemprop="contentUrl" data-size="1241x2017">
+                                <img src="images-new/tracks-preview-index-page.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Index/Preview All Uploaded Audio Tracks page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/playlist-edit-add-tracks.png" itemprop="contentUrl" data-size="1241x1514">
+                                <img src="images-new/playlist-edit-add-tracks.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Edit/Preview/Replace/Playlist Tracks page</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/custom-error-messages-on-delete.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/custom-error-messages-on-delete.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Custom Delete Alert Confirmation message box. "Danger Will Robinson!" :) </figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/public-playlist-custom-audio-player.png" itemprop="contentUrl" data-size="1241x953">
+                                <img src="images-new/public-playlist-custom-audio-player.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Audio Admin AWS S3 Interface<br/> TBH Audio Custom Audio Player of Playlist Public Facing Bootstrap 4/Responsive </figcaption>
+                        </figure>
+
+
+
+                    </div>
+                    <h6 class="trebuchet">Laravel Audio Admin AWS S3 Interface<br/> One-to-Many (one license can have many playlists).<br/> Many-to-Many (many playlists can have many audio tracks)</h6>
+                    <a href="#demo12" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo12" class="collapse calibri">
+                        <br/>
+                        <p>With this work project I learned quite a bit about how to get more complex database relationships to work with Laravel/Eloquent ORM.  This required the use of a many-to-many relationship to store information about the track and the playlist associated with it.  It also required a one-to-many relationship so that one license could have many playlists associated with it.  This admin interface was replacing a third-party paid service that the company had used for years to store audio files for instructional recordings.  This admin interface is useful because it also stores the audio files on AWS S3, and behaves as a true CRUD app both in the database and on the S3 side when Creating, Reading, Updating, or Deleting (cascade deletion of related parent/child records, and files- - depending on what is deleted) Tracks. In my capacity as a developer, I was 'full-stack' in the truest sense.  I created the database structure, coded the back-end, and front-end from scratch.  This project was completed in February 2019.</p></div>
+                </div>
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-finance-reporting-csv-tool.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/tbh-finance-reporting-main.png" itemprop="thumbnail" alt="TBH Finance Crystal Reports replacement" />
+                            </a>
+                            <figcaption itemprop="caption description">TBH Crystal Reports replacement<br/> Page where most reports are run from... select desired report from dropdown, enter a date range, then click the 'Download Report' button to download a CSV.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-finance-reporting-by-state.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/tbh-finance-reporting-by-state.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">TBH Crystal Reports replacement<br/> State based report.  First select desired state from dropdown, enter a date range, then click the 'Download Report' button to download a CSV.</figcaption>
+                        </figure>
+
+
+                    </div>
+                    <h6 class="trebuchet">TBH Crystal Reports Replacement<br/> Laravel/PHP</h6>
+                    <a href="#demo13" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo13" class="collapse calibri">
+                        <br/>
+                        <p>I created this internal reporting tool for TBH to better centralize several reports that the company's Accounting department utilizes in their daily duties.   It was also coded to be a more user-friendly experience when compared with Crystal Reports, which the company had been using before this app was introduced.  When a report is selected and a date range has been entered it will query the relevant database tables and generate a CSV file for easy viewing in Microsoft Excel.  I wrote the CSV creation script in vanilla PHP using the best practices instead of utilizing a Laravel package.</p></div>
+                </div>
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-timesheet-generator.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/tbh-timesheet-generator-main.png" itemprop="thumbnail" alt="TBH/TLS Timesheet PDF generator" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Home/navigation page to appropriate timesheet generation Calendar.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-timesheet-generator-hourly-calendar.png" itemprop="contentUrl" data-size="1256x1524">
+                                <img src="images-new/tbh-timesheet-generator-hourly-calendar.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Hourly calendar PDF generation view.  You may select from the dropdown for each date any hours worked, sick, vacation, or Other (portion or whole days), and enter a note explaining Other types of absences.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-timesheet-generator-hourly-calendar-filled-out.png" itemprop="contentUrl" data-size="1256x1524">
+                                <img src="images-new/tbh-timesheet-generator-hourly-calendar-filled-out.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Hourly calendar filled out.  Once filled out, click the 'Download PDF of Timesheet' button and a PDF version of the calendar and proper entries will be downloaded.</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-timesheet-generator-hourly-pdf-output.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/tbh-timesheet-generator-hourly-pdf-output.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Downloaded PDF version of hourly calendar with summary of hours worked, sick, vacation, other, and total of all. </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-timesheet-generator-salaried-calendar.png" itemprop="contentUrl" data-size="1256x1218">
+                                <img src="images-new/tbh-timesheet-generator-salaried-calendar.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Salary calendar PDF generation view.  You may select from the dropdown for each date any hours worked, sick, vacation, or Other, and enter a note explaining Other types of absences.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-timesheet-generator-salaried-calendar-filled-out.png" itemprop="contentUrl" data-size="1256x1218">
+                                <img src="images-new/tbh-timesheet-generator-salaried-calendar-filled-out.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Salary calendar filled out.  Once filled out, click the 'Download PDF of Timesheet' button and a PDF version of the calendar and proper entries will be downloaded.</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tbh-timesheet-generator-salary-pdf-output.png" itemprop="contentUrl" data-size="1241x823">
+                                <img src="images-new/tbh-timesheet-generator-salary-pdf-output.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Calendar based Timesheet PDF Generator<br/> Downloaded PDF version of salary calendar.</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Laravel Calendar based Timesheet PDF Generator</h6>
+                    <a href="#demo14" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo14" class="collapse calibri">
+                        <br/>
+                        <p>With this work project I utilized some knowledge I gained from another project where I generated PDFs based on an HTML/CSS template.  I created the project in Laravel with Bootstrap 4, and utilized wkhtmltopdf open source technology with a Laravel package called Snappy. This replaced the company's generic Excel spreadsheet method for keeping track of employee's dates worked and hours.</p></div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazers-section-main.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images-new/tblazersfans-main.png" itemprop="thumbnail" alt="Image description" data-size="964x1024" />
+                            </a>
+                            <figcaption itemprop="caption description">Rails prototype- - Portland Trail Blazers fans website</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/tblazers-game-boxscore-fullpage.png" itemprop="contentUrl" data-size="756x751">
+                                <img src="images-new/tblazers-game-boxscore-fullpage.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Rails prototype continued<br/>CSV Boxscore upload, pagination and CRUD</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/boxscore-confine-show.png" itemprop="contentUrl" data-size="562x1345">
+                                <img src="images-new/boxscore-confine-show.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Boxscore formatting after import</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazersfans-calendar-good.png" itemprop="contentUrl" data-size="1063x1108">
+                                <img src="images-new/blazersfans-calendar-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Rails prototype continued <br/>Calendar with CRUD events</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Ruby on Rails</h6>
+                    <a href="#demo5" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo5" class="collapse calibri">
+                        <br/>
+                        <p>I am a big basketball fan both college (Gonzaga and March Madness) and the NBA.  As a challenge to myself while in my down time after studying, I decided to try to create a Ruby on Rails application that was inspired by my favorite NBA team, the Portland Trail Blazers.  I took the time to implement the things that I had learned from the course I took in Rails at Spokane Community College and I also took the time to learn about and implement things that I did not know about before like how to call multiple databases from one page, create a calendar that you and load events into, and to upload a CSV file to seed data to a Model from a view.</p><p>I also learned to deploy this site using PostgreSQL  and Capistrano on an Apache Digital Ocean droplet.  If you wish to visit this site please do so at: <a href="http://dev.thisdudecodes.com/" target="_blank">http://dev.thisdudecodes.com</a>.  **Please note that this site is a prototype and still in development.  Here is the <a href="https://github.com/iplayguitar81/charlestonchoosetheright" target="_blank">GitHub repository</a> for this site.  I hope to be able to develop this Rails application out more and will do so as time allows.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/lilac-city-full.png" itemprop="contentUrl" data-size="1024x1024">
+                                <img src="images-new/lilac-main.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Static HTML5/CSS site developed in 2013</figcaption>
+                        </figure>
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/jquery-dogbook-cover-good.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images-new/jquery-dogbook-cover-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">jQuery flipbook featuring cute pets</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/roscoe-flipped-open-good.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images-new/roscoe-flipped-open-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">jQuery flipped page of book.<br/> Charming little fella eh?</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/lilac-dogs-contact-page-good.png" itemprop="contentUrl" data-size="964x1024">
+                                <img src="images-new/lilac-dogs-contact-page-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Contact page PHP</figcaption>
+                        </figure>
+
+
+                    </div>
+                    <h6 class="trebuchet">HTML5/CSS/jQuery<br/><a href="https://thisdudecodes.com/lilac-dogs" class="port-links" target="_blank">Lilac Dogs (Archived Site)</a></h6>
+                    <a href="#demo6" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo6" class="collapse calibri">
+                        <br/>
+                        <p>I completed this web page during summer break of 2013.  It was around this time that I started feeling that I was gaining greater competence with my HTML5/CSS3 skills and I also introduced myself to jQuery plug-ins (See the ‘Meet Our All Stars’ page).  I did this project for a friend.  Unfortunately, she has decided to discontinue her dog walking business to focus on her regular 9-5 job.  I spent many hours developing my front-end skills while creating this site.  Since the site is offline, I have decided to host the project on this site so you may still see a live version of it by visiting:<br/> <a href="http://thisdudecodes.com/lilac-dogs" target="_blank">http://thisdudecodes.com/lilac-dogs</a></p></div>
+                </div>
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/checkenginefree-map-view-page.png" itemprop="contentUrl" data-size="1048x1258">
+                                <img src="images-new/checkengine-main.png" itemprop="thumbnail" alt="checkenginefree.com" />
+                            </a>
+                            <figcaption itemprop="caption description">Single page jQuery Mobile fully responsive integrated with Google Maps API/Google Fusion Tables, GPS, browser geolocation, SSL,<br/> and functional search string location to GPS coordinates refresh map and nearest locations</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/checkengine-validation-show-good.png" itemprop="contentUrl" data-size="1063x2275">
+                                <img src="images-new/checkengine-validation-show-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Location error reporting with clever Spam validation</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/checkenginefree-contact-good.png" itemprop="contentUrl" data-size="1063x975">
+                                <img src="images-new/checkenginefree-contact-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Contact form PHP</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/checkenginefree-form-validation-good.png" itemprop="contentUrl" data-size="1063x1035">
+                                <img src="images-new/checkenginefree-form-validation-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Contact form validation</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Single Page jQuery Mobile<br/><a href="https://checkenginefree.com" target="_blank" class="port-links">CheckEngineFree.com</a></h6>
+                    <a href="#demo7" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo7" class="collapse calibri">
+                        <br/>
+                        <p>This one page responsive web app utilizes HTML5, CSS, Javascript/jQuery, jQuery Mobile, Google Maps API (JSON), Browser GPS and PHP (contact form page).  If you wish to see the live web page please visit: <a href="https://checkenginefree.com/" target="_blank">http://www.checkenginefree.com</a></p>  <p>NOTE- - This site needs to be updated (it was coded in Summer 2014) because Google Fusion Tables is being deprecated.  I have every intention of updating this site so that it can be useful for many years to come! (March 2019)</p>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 mt-5 col-md-6">
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/amhodgson-section-main.png" itemprop="contentUrl" data-size="1048x1333">
+                                <img src="images-new/amhodgson-main.png" itemprop="thumbnail" alt="amhodgson.com" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom responsive Tumblr template<br/> with added Contact page (PHP)</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/amhodgsonbooks-good.png" itemprop="contentUrl" data-size="600x2429">
+                                <img src="images-new/amhodgsonbooks-good.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Neatly laid out CSS/HTML based on client's vision<br>custom font yet SEO friendly!</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/amhodgsoncontact-full.png" itemprop="contentUrl" data-size="1063x1300">
+                                <img src="images-new/amhodgsoncontact-full.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Custom Contact page PHP<br/>**Built outside of Tumblr</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">Custom Tumblr Theme<br/><a href="http://www.amhodgson.com" target="_blank" class="port-links">AMHodgson.com</a></h6>
+                    <a href="#demo8" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo8" class="collapse calibri">
+                        <br/>
+
+                        <p>I created this responsive custom Tumblr theme with my sister for her writing career.  Before taking on this project I did not know much about Tumblr, so I was required to learn how to create a custom theme and found that it is a similar process to creating Wordpress themes.  For this project I also created a custom contact form page utilizing PHP.  I would not say that I am proficient at creating Tumblr themes but I am confident I could get better at it, and it would also not be difficult for me to learn similar templating.  If you wish to see the live version of this website please visit:  <a href="http://amhodgson.com/" target="_blank">http://www.amhodgson.com</a></p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/laravel-blazersfans-mainpage.png" itemprop="contentUrl" data-size="1175x2294">
+                                <img src="images-new/laravel-blazersfans-mainpage-thumb.png" itemprop="thumbnail" alt="Laravel Trail Blazers fan site Main Page" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/> Trail Blazers fan site Main Page</figcaption>
+                        </figure>
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazersfans-laravel-article-show.png" itemprop="contentUrl" data-size="1190x1607">
+                                <img src="images-new/blazersfans-laravel-article-show.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/>individual article show page Trail Blazers fan site</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazersfans-laravel-boxscore-listings-pagination.png" itemprop="contentUrl" data-size="1175x999">
+                                <img src="images-new/blazersfans-laravel-boxscore-listings-pagination.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/> Blazers fans historical boxscores w/ pagination </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazersfans-laravel-boxscore-full-page.png" itemprop="contentUrl" data-size="1190x2270">
+                                <img src="images-new/blazersfans-laravel-boxscore-full-page.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC <br/> Blazers fans individual boxscore full page w/ Facebook comments</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazersfans-laravel-contact-page.png" itemprop="contentUrl" data-size="1175x920">
+                                <img src="images-new/blazersfans-laravel-contact-page.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC<br/> Blazers fans contact page w/ validation</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazersfans-laravel-login-social-media-oauth.png" itemprop="contentUrl" data-size="1175x934">
+                                <img src="images-new/blazersfans-laravel-login-social-media-oauth.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC Login<br/>w/ optional social media OAuth login capability.</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/blazersfans-laravel-edit-article-full-page.png" itemprop="contentUrl" data-size="1177x3485">
+                                <img src="images-new/blazersfans-laravel-edit-article-full-page.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel MVC Edit Article<br/>w/ ability to add images to article image gallery and add/edit captions.</figcaption>
+                        </figure>
+
+
+                    </div>
+                    <h6 class="trebuchet">Learning the Laravel  Framework 2015<br/><a href="https://trailblazersfans.com" class="port-links" target="_blank">TrailBlazersFans.com</a></h6>
+                    <a href="#demo10" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo10" class="collapse calibri">
+                        <br/>
+                        <p>Since I became familiar with Rails and MVC during school I had been reading about other similar MVC frameworks and decided to learn Laravel in 2015 during my free time outside of class.  I was very happy I did because it is steadily becoming a favorite in my skillset.  Here is a recent example of what I can do while working with this technology in combination with styling.  Currently, I have a live version of this site at: <a href="https://trailblazersfans.com" target="_blank">https://trailblazersfans.com</a>.  The site is definitely a demo, and work still remains to be done.   Here is the <a href="https://github.com/iplayguitar81/beeftaco" target="_blank">GitHub repository</a> for this site.  It has been a fun and rewarding experience learning Laravel because I have found I am able to learn MVC frameworks fairly easily and am excited to learn many more during my career or as my personal time allows!</p></div>
+                </div>
+
+
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/ASP-mvc-albums-CRUD.png" itemprop="contentUrl" data-size="1024x1024">
+                                <img src="images-new/ASP-mvc-albums-CRUD-thumb.png" itemprop="thumbnail" alt="CRUD MVC ASP" />
+                            </a>
+                            <figcaption itemprop="caption description">MVC ASP CRUD</figcaption>
+                        </figure>
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/MVC-ASP-CRUD-with-image-upload.png" itemprop="contentUrl" data-size="1323x784">
+                                <img src="images-new/MVC-ASP-CRUD-with-image-upload.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">MVC ASP Create view with image upload</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/social-logins-oauth-mvc-asp.png" itemprop="contentUrl" data-size="1323x784">
+                                <img src="images-new/social-logins-oauth-mvc-asp.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Social media OAuth2 login links<br/> I have test accounts working with all providers listed</figcaption>
+                        </figure>
+
+                    </div>
+                    <h6 class="trebuchet">ASP.NET MVC</h6>
+                    <a href="#demo9" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo9" class="collapse calibri">
+                        <br/>
+                        <p>Since I became familiar with Rails and the concept of MVC during school, I decided to learn ASP.NET MVC at the same time, while not busy studying.  Here is some idea of what I can do with that technology in a short amount of time.  Unfortunately,  I do not currently have a neatly designed page as I have mostly been focusing on learning the backend of this technology.  There are also other things (not pictured) that I have figured out with this technology like pagination of records- - for example, but I do not have a photo at this time only the code itself.  I also do not have a live version of this site but if requested I can provide examples of said code!  It has been a cool experience learning ASP.NET MVC because I have found that I am able to learn it and other MVC frameworks fairly easily and am excited about the prospect of learning more as time allows!</p></div>
+                </div>
+
+
+            </div>
+            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                <!-- Background of PhotoSwipe.
+                     It's a separate element, as animating opacity is faster than rgba(). -->
+                <div class="pswp__bg"></div>
+
+                <!-- Slides wrapper with overflow:hidden. -->
+                <div class="pswp__scroll-wrap">
+
+                    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+
+                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                    <div class="pswp__ui pswp__ui--hidden">
+
+                        <div class="pswp__top-bar">
+
+                            <!--  Controls are self-explanatory. Order can be changed. -->
+
+                            <div class="pswp__counter"></div>
+
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                            <!-- element will get class pswp__preloader--active when preloader is running -->
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br/>
+            <br/>
+
+
         </div>
 
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            Contact
+            <br/>
+            <h1 id="contact_header" class="text-center trebuchet lg-headers"><i class="fas fa-envelope"></i> Contact Chris</h1>
+
+            <div id="contact_success">
+                <h1 class="trebuchet text-center">Thank you for Contacting Me!</h1>
+                <div id="contact_success_words">
+                    <p class="text-center calibri main-text">I will do my best to get back to you as soon as possible!</p>
+                    <p class="text-center calibri main-text">Thank you and have an excellent day!</p>
+                </div>
+            </div>
+
+            <div id="contact_form">
+                <form id="form1">
+                    <p class="calibri main-text">Please feel free to send me a message!  I will review what has been sent to me and get back to you as soon as possible!  Thank you for taking the time to look at my portfolio &amp; resume.</p>
+                    <br/>
+                    <div data-role="content">
+                        <div class="form-group trebuchet">
+                            <label class="resume-label" for="name" data-theme="d">Name</label>
+
+                            <div data-role="fieldcontainer">
+                            <input class="form-control" type="text" id="name" name="name" data-theme="a" placeholder="Please Enter Your Name"/>
+                            </div>
+
+                            </div>
+                        <br/>
+                        <div class="form-group trebuchet">
+                            <label class="resume-label" for="email" data-theme="d">E-mail</label>
+                        <div data-role="fieldcontainer">
+                            <input class="form-control" type="email" id="email" name="email" data-theme="a" placeholder="Please Enter Your Email"/>
+                        </div>
+
+                        </div>
+                        <br/>
+                        <div class="form-group trebuchet">
+                        <label class="resume-label" for="comments" data-theme="d">Message</label>
+                        <div data-role="fieldcontainer">
+                            <textarea class="form-control" id="comments" name="comments" data-theme="d" placeholder="Please Enter Your Message"></textarea>
+                        </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <input class="btn btn-lg btn-dark" type="submit" data-theme="a" value="Send Message" id="submit"/>
+                    <br/>
+                    <br/>
+                </form>
+            </div>
+
         </div>
 
     </div>
-    </div>
+</div>
+<br/>
+<footer class="footer">
 
+<div class="container text-center trebuchet">
+    <i class="fas fa-code text-muted"></i>
+    thisdudecodes.com
+    <br/>
 
+    <span id="copyright">
+        &copy;
+        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+    </span>
 
+</div>
 
-<!--<div class="container">-->
+</footer>
 
+<style scoped>
+    @import "css/photoswipe.css";
+    @import "css/default-skin.css";
+</style>
 
-
-
-
-
-
-
-<!--</div>-->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--jquery form validation-->
+<script src="jquery.validate.min.js"></script>
+
+
+
+
+
+
+<!-- lightgallery plugins -->
+<script src="js/lg-thumbnail.min.js"></script>
+<script src="js/lg-fullscreen.min.js"></script>
+
+
+<script src="js/vendor/jquery.hashchange.min.js"></script>
+<script src="js/vendor/jquery.easytabs.min.js"></script>
+
+
+
+<script src="js/main.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+
+<!-- Photoswipe  set of js and calling it-->
+<script src="js/index.js"></script>
+<script src="js/photoswipe.min.js"></script>
+<script src="js/photoswipe-ui-default.min.js"></script>
+
+
+
+
+
+
+<!--contact form JS-->
+<script>
+    $(document).ready(function() {
+
+        $(".invalid_info_success").hide();
+        $("#contact_success").hide();
+    });
+
+    $("#form1").validate({
+        rules: {name: {required: true}, comments: {required: true}, email: {required: true}},
+        messages: {
+            name: {required: "<i class='fas fa-exclamation-circle'></i> Please enter your name so I know who is contacting me!"},
+            email: {required: "<i class='fas fa-exclamation-circle'></i> Please enter your email address so I know where to send a response to!"},
+            comments: {required: "<i class='fas fa-exclamation-circle'></i> Please enter your message so I will know why you are contacting me!"}
+        },
+        errorPlacement: function (e, t) {
+            e.prependTo(t.parent())
+        },
+        submitHandler: function (e) {
+            sendContact();
+            $("#form1").hide();
+            $("#contact_header").hide();
+            $("#contact_success").show();
+            $("#contact_success").css("visibility", "visible");
+            return false
+        }
+    });
+
+    function sendContact(){var e=$("input#name").val();var t=$("input#email").val();var n=$("textarea#comments").val(); $.ajax({type:"POST",url:"contactFormHandling.php",data:{comments:JSON.stringify(n),email:JSON.stringify(t),name:JSON.stringify(e)}})}
+
+
+    //photoSwipe JS
+
+    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+        // parse slide data (url, title, size ...) from DOM elements
+        // (children of gallerySelector)
+        var parseThumbnailElements = function(el) {
+            var thumbElements = el.childNodes,
+                numNodes = thumbElements.length,
+                items = [],
+                figureEl,
+                linkEl,
+                size,
+                item;
+
+            for(var i = 0; i < numNodes; i++) {
+
+                figureEl = thumbElements[i]; // <figure> element
+
+                // include only element nodes
+                if(figureEl.nodeType !== 1) {
+                    continue;
+                }
+
+                linkEl = figureEl.children[0]; // <a> element
+
+                size = linkEl.getAttribute('data-size').split('x');
+
+                // create slide object
+                item = {
+                    src: linkEl.getAttribute('href'),
+                    w: parseInt(size[0], 10),
+                    h: parseInt(size[1], 10)
+                };
+
+
+
+                if(figureEl.children.length > 1) {
+                    // <figcaption> content
+                    item.title = figureEl.children[1].innerHTML;
+                }
+
+                if(linkEl.children.length > 0) {
+                    // <img> thumbnail element, retrieving thumbnail url
+                    item.msrc = linkEl.children[0].getAttribute('src');
+                }
+
+                item.el = figureEl; // save link to element for getThumbBoundsFn
+                items.push(item);
+            }
+
+            return items;
+        };
+
+        // find nearest parent element
+        var closest = function closest(el, fn) {
+            return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+        };
+
+        // triggers when user clicks on thumbnail
+        var onThumbnailsClick = function(e) {
+            e = e || window.event;
+            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+            var eTarget = e.target || e.srcElement;
+
+            // find root element of slide
+            var clickedListItem = closest(eTarget, function(el) {
+                return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+            });
+
+            if(!clickedListItem) {
+                return;
+            }
+
+            // find index of clicked item by looping through all child nodes
+            // alternatively, you may define index via data- attribute
+            var clickedGallery = clickedListItem.parentNode,
+                childNodes = clickedListItem.parentNode.childNodes,
+                numChildNodes = childNodes.length,
+                nodeIndex = 0,
+                index;
+
+            for (var i = 0; i < numChildNodes; i++) {
+                if(childNodes[i].nodeType !== 1) {
+                    continue;
+                }
+
+                if(childNodes[i] === clickedListItem) {
+                    index = nodeIndex;
+                    break;
+                }
+                nodeIndex++;
+            }
+
+
+            if(index >= 0) {
+                // open PhotoSwipe if valid index found
+                openPhotoSwipe( index, clickedGallery );
+            }
+            return false;
+        };
+
+        // parse picture index and gallery index from URL (#&pid=1&gid=2)
+        var photoswipeParseHash = function() {
+            var hash = window.location.hash.substring(1),
+                params = {};
+
+            if(hash.length < 5) {
+                return params;
+            }
+
+            var vars = hash.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                if(!vars[i]) {
+                    continue;
+                }
+                var pair = vars[i].split('=');
+                if(pair.length < 2) {
+                    continue;
+                }
+                params[pair[0]] = pair[1];
+            }
+
+            if(params.gid) {
+                params.gid = parseInt(params.gid, 10);
+            }
+
+            return params;
+        };
+
+        var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+            var pswpElement = document.querySelectorAll('.pswp')[0],
+                gallery,
+                options,
+                items;
+
+            items = parseThumbnailElements(galleryElement);
+
+            // define options (if needed)
+            options = {
+
+                // define gallery index (for URL)
+                galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                getThumbBoundsFn: function(index) {
+                    // See Options -> getThumbBoundsFn section of documentation for more info
+                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                        pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                        rect = thumbnail.getBoundingClientRect();
+
+                    return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                },
+
+//                getDoubleTapZoom: function(isMouseClick, item) {
+//                    if(isMouseClick) {
+//                        return .8; //<---- This 4
+//                    } else {
+//                        return item.initialZoomLevel < 0.7 ? .5 : .5; //<---- 4 here
+//                    }
+//                },
+//                maxSpreadZoom: .5 //<---- and this 4 here
+
+
+            };
+
+            // PhotoSwipe opened from URL
+            if(fromURL) {
+                if(options.galleryPIDs) {
+                    // parse real index when custom PIDs are used
+                    // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                    for(var j = 0; j < items.length; j++) {
+                        if(items[j].pid == index) {
+                            options.index = j;
+                            break;
+                        }
+                    }
+                } else {
+                    // in URL indexes start from 1
+                    options.index = parseInt(index, 10) - 1;
+                }
+            } else {
+                options.index = parseInt(index, 10);
+            }
+
+            // exit if index not found
+            if( isNaN(options.index) ) {
+                return;
+            }
+
+            if(disableAnimation) {
+                options.showAnimationDuration = 0;
+            }
+
+            // Pass data to PhotoSwipe and initialize it
+            gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        // loop through all gallery elements and bind events
+        var galleryElements = document.querySelectorAll( gallerySelector );
+
+        for(var i = 0, l = galleryElements.length; i < l; i++) {
+            galleryElements[i].setAttribute('data-pswp-uid', i+1);
+            galleryElements[i].onclick = onThumbnailsClick;
+        }
+
+        // Parse URL and open gallery if it contains #&pid=3&gid=1
+        var hashData = photoswipeParseHash();
+        if(hashData.pid && hashData.gid) {
+            openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+        }
+    };
+
+    // execute above function
+    initPhotoSwipeFromDOM('.my-gallery');
+
+
+
+
+    //tab linking from independent link inside page:
+    $('.tab-link').on('click', function(event) {
+        // Prevent url change
+        event.preventDefault();
+
+        // `this` is the clicked <a> tag
+        var target = $('[data-toggle="tab"][href="' + this.hash + '"]');
+
+        // opening tab
+        target.trigger('click');
+        // scrolling into view
+        target[0].scrollIntoView(true);
+    });
+
+
+
+
+
+
+
+</script>
+
 </body>
 </html>

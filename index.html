@@ -963,6 +963,97 @@
                 </div>
 
 
+
+                <div class="col-sm-12 mt-5 col-md-6">
+
+                    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/video-admin-playlist-home.png" itemprop="contentUrl" data-size="1068x823">
+                                <img src="images-new/tbh-video-admin-main.png" itemprop="thumbnail" alt="TBH/TLS Audio Admin Interface" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH playlist admin CRUD</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/create-video.png" itemprop="contentUrl" data-size="1069x837">
+                                <img src="images-new/create-video.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH Create/Upload Video (mp4) to S3 page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/create-video-license.png" itemprop="contentUrl" data-size="1069x823">
+                                <img src="images-new/create-video-license.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH Create Video License page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/create-playlist-based-on-video-license.png" itemprop="contentUrl" data-size="1069x823">
+                                <img src="images-new/create-playlist-based-on-video-license.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH Create Video Playlist (name) w/ Associated License (one-to-many- - one license has many playlists) page </figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/edit-video.png" itemprop="contentUrl" data-size="1069x1394">
+                                <img src="images-new/edit-video.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH Edit/Preview/Replace/Upload Video (mp4) to S3 page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/view-all-videos-pagination.png" itemprop="contentUrl" data-size="1069x4200">
+                                <img src="images-new/view-all-videos-pagination.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH Index/Preview All Uploaded Videos page</figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/playlist-video-admin.png" itemprop="contentUrl" data-size="1069x3558">
+                                <img src="images-new/playlist-video-admin.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH Edit/Preview/Replace/Playlist Videos page</figcaption>
+                        </figure>
+
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/custom-alert-confirmation-message.png" itemprop="contentUrl" data-size="1069x823">
+                                <img src="images-new/custom-alert-confirmation-message.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin AWS S3 Interface<br/> TBH Custom Delete Alert Confirmation message box. "Danger Will Robinson!" :) </figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/public-facing-video-player-playlist-custom-devo.png" itemprop="contentUrl" data-size="1069x1407">
+                                <img src="images-new/public-facing-video-player-playlist-custom-devo.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Public Desktop<br/> TBH Video Custom Audio Player of Playlist Public Facing Bootstrap 4/Responsive </figcaption>
+                        </figure>
+
+                        <figure style="display:none;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="images-new/mobile-video-public.png" itemprop="contentUrl" data-size="476x991">
+                                <img src="images-new/mobile-video-public.png" itemprop="thumbnail" alt="Image description" />
+                            </a>
+                            <figcaption itemprop="caption description">Laravel Video Admin Public Mobile<br/> TBH Audio Custom Audio Player of Playlist Public Facing Mobile-friendly/Responsive Bootstrap 4 Xcode iPhone simulation :)</figcaption>
+                        </figure>
+
+
+
+                    </div>
+                    <h6 class="trebuchet">Laravel TBH Video Admin AWS S3 Interface<br/> One-to-Many (one license can have many playlists).<br/> Many-to-Many (many playlists can have many audio tracks)</h6>
+                    <a href="#demo15" class="btn btn-dark" data-toggle="collapse">More Info</a>
+                    <div id="demo15" class="collapse calibri">
+                        <br/>
+                        <p>With this work project (along with the proceeding Laravel Audio Admin AWS S3 Interface), I learned quite a bit about how to get more complex database relationships to work with Laravel/Eloquent ORM.  This required the use of a many-to-many relationship to store information about the video and the playlist associated with it in a pivot table.  It also required a one-to-many relationship so that one license could have many playlists associated with it.  This admin interface was replacing a third-party paid service that the company had used for years to store video files of instructional lectures.  This admin interface is useful because it also stores the video files on AWS S3, and behaves as a true CRUD app both in the database and on the S3 side when Creating, Reading, Updating, or Deleting (cascade deletion of related parent/child records, and files- - depending on what is deleted) Videos. In my capacity as a developer on this project, I was 'full-stack' in the truest sense.  I created the database structure, coded the back-end, and front-end from scratch with limited direction.  This project was completed in March/April 2019.</p></div>
+                </div>
+
+
+
+
                 <div class="col-sm-12 mt-5 col-md-6">
 
                     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
@@ -1047,7 +1138,7 @@
                     <a href="#demo12" class="btn btn-dark" data-toggle="collapse">More Info</a>
                     <div id="demo12" class="collapse calibri">
                         <br/>
-                        <p>With this work project I learned quite a bit about how to get more complex database relationships to work with Laravel/Eloquent ORM.  This required the use of a many-to-many relationship to store information about the track and the playlist associated with it.  It also required a one-to-many relationship so that one license could have many playlists associated with it.  This admin interface was replacing a third-party paid service that the company had used for years to store audio files for instructional recordings.  This admin interface is useful because it also stores the audio files on AWS S3, and behaves as a true CRUD app both in the database and on the S3 side when Creating, Reading, Updating, or Deleting (cascade deletion of related parent/child records, and files- - depending on what is deleted) Tracks. In my capacity as a developer, I was 'full-stack' in the truest sense.  I created the database structure, coded the back-end, and front-end from scratch.  This project was completed in February 2019.</p></div>
+                        <p>With this work project (along with the preceeding Laravel Video Admin AWS S3 Interface),  I learned quite a bit about how to get more complex database relationships to work with Laravel/Eloquent ORM.  This required the use of a many-to-many relationship to store information about the track and the playlist associated with it in a pivot table.  It also required a one-to-many relationship so that one license could have many playlists associated with it.  This admin interface was replacing a third-party paid service that the company had used for years to store audio files for instructional recordings.  This admin interface is useful because it also stores the audio files on AWS S3, and behaves as a true CRUD app both in the database and on the S3 side when Creating, Reading, Updating, or Deleting (cascade deletion of related parent/child records, and files- - depending on what is deleted) Tracks.  In my capacity as a developer on this project, I was 'full-stack' in the truest sense.  I created the database structure, coded the back-end, and front-end from scratch with limited direction.  This project was completed in February 2019.</p></div>
                 </div>
 
 
